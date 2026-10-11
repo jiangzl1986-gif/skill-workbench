@@ -1,0 +1,13 @@
+name: 创作场景与功能建议
+description: 描述你希望怎样使用 Skill 画布
+body:
+  - type: textarea
+    attributes:
+      label: 你想完成什么
+      description: 从具体创作过程描述当前困难和理想操作。
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 示例与验收
+      description: 提供不含私有资料的例子，以及怎样判断功能有用。

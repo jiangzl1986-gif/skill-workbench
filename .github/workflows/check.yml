@@ -1,0 +1,23 @@
+name: Windows checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  local-workbench:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Prepare and build
+        shell: pwsh
+        run: ./setup.ps1
+      - name: Test source fidelity and boundaries
+        shell: pwsh
+        run: ./.venv/Scripts/python.exe -B -X utf8 -m pytest -q

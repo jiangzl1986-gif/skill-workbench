@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+markdown-it-py
+httpx
+pytest
+watchdog

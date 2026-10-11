@@ -1,0 +1,25 @@
+# User-owned content must stay outside Git history.
+.runtime/
+.venv/
+runtime/
+imports/
+versions/
+backups/
+logs/
+.env
+.env.*
+!.env.example
+*.sqlite*
+*.db
+__pycache__/
+*.py[cod]
+.pytest_cache/
+node_modules/
+.build-history/
+.dist-staging-*/
+dist/
+config/*.json
+!config/*.example.json
+*.log
+.DS_Store
+Thumbs.db
