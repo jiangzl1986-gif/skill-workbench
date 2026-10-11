@@ -1,17 +1,17 @@
-name: 使用问题
-description: 提交可以复现的问题（请使用公开示例）
+name: 使用问题 / Bug report
+description: 提交可以复现的问题 / Report a reproducible bug using a public example
 body:
   - type: textarea
     attributes:
-      label: 发生了什么
-      description: 请写预期行为、实际行为和复现步骤。
+      label: 发生了什么 / What happened?
+      description: 请写预期行为、实际行为和复现步骤。Include expected behavior, actual behavior and steps to reproduce.
     validations:
       required: true
   - type: textarea
     attributes:
-      label: 运行环境和版本
-      description: Windows、Python、Node.js 与本项目版本。
+      label: 运行环境和版本 / Environment and version
+      description: Windows 与工作台版本，安装包还是便携包？源码用户再提供 Python / Node.js 版本。Windows and workbench version; installer, portable or source? Python / Node.js versions only for source users.
   - type: textarea
     attributes:
-      label: 最小公开示例
-      description: 请勿上传私有 Skill、密钥、数据库或含个人路径的截图。
+      label: 最小公开示例 / Minimal public example
+      description: 请勿上传私有 Skill、密钥、数据库或含个人路径的截图。Do not upload private Skills, credentials, databases or screenshots with personal paths.

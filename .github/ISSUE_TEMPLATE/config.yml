@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 快速体验 / Try the public examples
+    url: https://github.com/jiangzl1986-gif/skill-workbench/blob/main/docs/TRY_IT.md
+    about: 从导入到内部组装与导出的图文演示 / A walkthrough from import to nested composition and export
+  - name: 上手提问、创作交流与公开案例 / Questions and showcases
+    url: https://github.com/jiangzl1986-gif/skill-workbench/discussions
+    about: 讨论如何使用工作台，分享有权公开的创作案例 / Discuss workflows and share examples you may publish

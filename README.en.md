@@ -4,9 +4,17 @@
 
 See how existing AI Skills are built, design new ones on a visual canvas, and combine modules from different sources. Export the complete design to your agent or developer for integration.
 
-[中文 / Bilingual overview](README.md) · [Download](https://github.com/jiangzl1986-gif/skill-workbench/releases) · [User guide (Chinese)](docs/USER_GUIDE.md)
+[**Download Windows installer**](https://github.com/jiangzl1986-gif/skill-workbench/releases/download/v0.1.0-beta.2/skill-workbench-0.1.0-beta.2-windows-x64-setup.exe) · [**Try the demo**](docs/TRY_IT.md#english) · [**Discussions**](https://github.com/jiangzl1986-gif/skill-workbench/discussions)
 
-![Skill Workbench: knowledge maps, a shared module library and an assembly canvas](docs/images/workbench.png)
+[中文 / Bilingual overview](README.md) · [All downloads](https://github.com/jiangzl1986-gif/skill-workbench/releases) · [User guide (Chinese)](docs/USER_GUIDE.md)
+
+![Skill Workbench: a visual canvas for AI Skill creation. Composition concept.](docs/images/social-preview.jpg)
+
+**Try one small change: add evidence checking inside a notes-to-outline Skill.** Both public examples ship with the installer. Follow the [bilingual walkthrough](docs/TRY_IT.md#english) to import, inspect, compose, connect and export a design.
+
+Windows x64 · Chinese UI · MIT · Local-first · **No separate Python / Node.js installation**
+
+If it helps you create Skills, **Star** the repository to find it again. Share public use cases in [Discussions](https://github.com/jiangzl1986-gif/skill-workbench/discussions), or report reproducible bugs through [Issues](https://github.com/jiangzl1986-gif/skill-workbench/issues/new/choose).
 
 <a id="english"></a>
 ## Why a visual workspace for AI Skills?
@@ -75,6 +83,8 @@ For example, add evidence review to a notes-to-outline Skill. Import both Skills
 Canvas connections express your design. **An executable Skill still requires interface integration, rule checks and independent validation by an agent or developer.** You pass the exported design to your chosen conversation; copying an instruction does not send it or prove usage. Automatically extracted file hierarchies and references are not treated as validated execution flows.
 
 ## Getting started — Windows
+
+For your first session, follow the [public-example walkthrough](docs/TRY_IT.md#english). You do not need your own Skill or a model account to try the workbench.
 
 1. Download the [Windows installer](https://github.com/jiangzl1986-gif/skill-workbench/releases), choosing **windows-x64-setup.exe**.
 2. Double-click it and choose **Install**. Open **Skill Workbench** when finished; your browser opens automatically. Desktop and Start menu shortcuts are available for later use.

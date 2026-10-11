@@ -1,5 +1,7 @@
 # 使用 Skill 创作画布
 
+第一次打开？先跟着 [公开示例图文演示 / Bilingual walkthrough](TRY_IT.md) 完成一个“把证据检查加入笔记转大纲内部”的小改动，再按本指南使用自己的来源。
+
 ## 开始使用（Windows 安装包）
 
 下载 **windows-x64-setup.exe**，双击并点击 **Install**。安装后可以从桌面或开始菜单打开 **Skill Workbench**，浏览器会自动显示工作台。安装向导为英文，工作台界面为中文。所需运行环境已经包含，无需自行安装 Python 或 Node.js，也不需要联网下载依赖。

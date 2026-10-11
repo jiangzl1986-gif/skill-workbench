@@ -8,9 +8,21 @@ Skill Workbench 把 Skill 的结构、规则和模块带到可缩放、可平移
 
 See how existing AI Skills are built, design new ones on a visual canvas, and combine modules from different sources. Export the complete design to your agent or developer for integration.
 
-[中文介绍](#中文介绍) · [English on this page](#english) · [English README](README.en.md) · [下载 / Download](https://github.com/jiangzl1986-gif/skill-workbench/releases) · [使用指南 / User guide](docs/USER_GUIDE.md)
+[**下载 Windows 安装包 / Windows installer**](https://github.com/jiangzl1986-gif/skill-workbench/releases/download/v0.1.0-beta.2/skill-workbench-0.1.0-beta.2-windows-x64-setup.exe) · [**图文演示 / Try the demo**](docs/TRY_IT.md) · [**交流与案例 / Discussions**](https://github.com/jiangzl1986-gif/skill-workbench/discussions)
 
-![Skill Workbench：知识地图、共享模块库与组装画布 / Knowledge maps, a shared module library and an assembly canvas](docs/images/workbench.png)
+[中文介绍](#中文介绍) · [English on this page](#english) · [English README](README.en.md) · [全部下载 / All downloads](https://github.com/jiangzl1986-gif/skill-workbench/releases) · [使用指南 / User guide](docs/USER_GUIDE.md)
+
+![Skill Workbench：让 Skill 可视化，让创作看得见 / A visual canvas for AI Skill creation. 模块组合示意 / Composition concept.](docs/images/social-preview.jpg)
+
+**先体验一个小改动：把“证据检查”加入“笔记转大纲”的内部模块。** 两个公开示例已经随安装包提供，下载后就能跟着 [图文演示](docs/TRY_IT.md) 完成导入、查看、内部组装、连线和设计导出。
+
+**Try one small change: add evidence checking inside a notes-to-outline Skill.** Both public examples ship with the installer. Follow the [bilingual walkthrough](docs/TRY_IT.md#english) to import, inspect, compose, connect and export a design.
+
+Windows x64 · 界面中文 / Chinese UI · MIT · 本机运行 / Local-first · **无需另装 Python / Node.js**
+
+如果它让你的 Skill 创作更清楚，欢迎在右上角点 **Star**，方便以后找到。欢迎在 [Discussions](https://github.com/jiangzl1986-gif/skill-workbench/discussions) 分享你的创作场景与可公开案例；可复现的程序问题请提交 [Issue](https://github.com/jiangzl1986-gif/skill-workbench/issues/new/choose)。
+
+If it helps you create Skills, **Star** the repository to find it again. Share public use cases in [Discussions](https://github.com/jiangzl1986-gif/skill-workbench/discussions), or report reproducible bugs through [Issues](https://github.com/jiangzl1986-gif/skill-workbench/issues/new/choose).
 
 <a id="中文介绍"></a>
 ## 为什么需要一个可视化的 Skill 工作台
@@ -81,6 +93,8 @@ flowchart LR
 画布上的连线表达你的设计。**实际可执行的 Skill 仍需要 Agent 或开发者完成接口接入、规则核验和独立验证。** 工作台导出完整设计，由你交给目标对话框；复制指令不会自动发送或证明已经调用。自动提取的文件层级和引用也不会被当成已经验证的执行流程。
 
 ## 快速开始（Windows）
+
+第一次体验可跟随 [公开示例图文演示](docs/TRY_IT.md)；无需先准备自己的 Skill，也无需模型账号。
 
 1. 下载 [Windows 安装包](https://github.com/jiangzl1986-gif/skill-workbench/releases)，选择 **windows-x64-setup.exe**。
 2. 双击安装程序，点击 **Install**；完成后打开 **Skill Workbench**，浏览器会自动显示工作台。以后可从桌面或开始菜单打开。
@@ -179,6 +193,8 @@ For example, add evidence review to a notes-to-outline Skill. Import both Skills
 Canvas connections express your design. **An executable Skill still requires interface integration, rule checks and independent validation by an agent or developer.** You pass the exported design to your chosen conversation; copying an instruction does not send it or prove usage. Automatically extracted file hierarchies and references are not treated as validated execution flows.
 
 ## Getting started — Windows
+
+For your first session, follow the [public-example walkthrough](docs/TRY_IT.md#english). You do not need your own Skill or a model account to try the workbench.
 
 1. Download the [Windows installer](https://github.com/jiangzl1986-gif/skill-workbench/releases), choosing **windows-x64-setup.exe**.
 2. Double-click it and choose **Install**. Open **Skill Workbench** when finished; your browser opens automatically. Desktop and Start menu shortcuts are available for later use.

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">Skill Workbench — 可视化 Skill 创作工作台</title>
+  <desc id="desc">模块组合的结构示意：导入、看懂、重组、交给 Agent 实现。不是程序截图。</desc>
+  <defs>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#32514a"/></pattern>
+    <linearGradient id="background" x2="1" y2="1"><stop stop-color="#102c26"/><stop offset="1" stop-color="#071a16"/></linearGradient>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#a4d5b5" stroke-width="1.5"/></marker>
+  </defs>
+  <rect width="1280" height="640" fill="url(#background)"/>
+  <rect x="666" y="44" width="570" height="548" rx="24" fill="url(#dots)"/>
+  <g font-family="Segoe UI,Microsoft YaHei UI,Microsoft YaHei,sans-serif">
+    <rect x="56" y="50" width="40" height="40" rx="10" fill="#b5e6c6"/>
+    <path d="M66 68h20M76 60v8M68 69v11M84 69v11" stroke="#102c26" stroke-width="2"/>
+    <text x="112" y="79" fill="#dbefe3" font-size="23" font-weight="650">Skill Workbench</text>
+    <text x="56" y="199" fill="#f7fff9" font-size="57" font-weight="700">让 Skill 可视化</text>
+    <text x="56" y="272" fill="#b5e6c6" font-size="57" font-weight="700">让创作看得见</text>
+    <text x="58" y="330" fill="#d8e5de" font-size="26">在无限画布上，整理、设计与重组。</text>
+    <text x="58" y="383" fill="#9fc3af" font-size="23">A visual canvas for AI Skill creation.</text>
+    <rect x="58" y="432" width="545" height="57" rx="12" fill="#1d3c32" stroke="#34594a"/>
+    <text x="79" y="468" fill="#eff8f1" font-size="21">导入 → 看懂 → 重组 → 交给 Agent 实现</text>
+    <text x="58" y="548" fill="#c4d5ca" font-size="20">Windows · Local-first · MIT</text>
+    <text x="58" y="582" fill="#94b3a0" font-size="18">无需另装 Python / Node.js</text>
+    <rect x="716" y="86" width="234" height="92" rx="14" fill="#f4f7ef"/>
+    <text x="735" y="116" fill="#657c70" font-size="16">SOURCE A</text>
+    <text x="735" y="151" fill="#173d2b" font-size="25" font-weight="650">笔记 → 大纲</text>
+    <rect x="984" y="86" width="228" height="92" rx="14" fill="#f4f7ef"/>
+    <text x="1003" y="116" fill="#657c70" font-size="16">SOURCE B</text>
+    <text x="1003" y="151" fill="#173d2b" font-size="25" font-weight="650">证据复核</text>
+    <path d="M834 178V218M1098 178V218H1112V270" fill="none" stroke="#a4d5b5" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <rect x="716" y="230" width="496" height="294" rx="18" fill="#193d2f" stroke="#76ab8a" stroke-width="1.5"/>
+    <text x="738" y="262" fill="#dcefe0" font-size="20" font-weight="650">新 Skill · 内部组装</text>
+    <rect x="738" y="295" width="170" height="72" rx="12" fill="#f4f7ef"/>
+    <text x="755" y="323" fill="#677d70" font-size="14">FROM A</text>
+    <text x="755" y="351" fill="#173d2b" font-size="23">素材整理</text>
+    <rect x="1018" y="295" width="172" height="72" rx="12" fill="#daf0e0" stroke="#7db990" stroke-width="2"/>
+    <text x="1035" y="323" fill="#55745f" font-size="14">FROM B</text>
+    <text x="1035" y="351" fill="#173d2b" font-size="23">证据检查</text>
+    <rect x="888" y="419" width="180" height="72" rx="12" fill="#f4f7ef"/>
+    <text x="906" y="447" fill="#677d70" font-size="14">FROM A</text>
+    <text x="906" y="475" fill="#173d2b" font-size="23">大纲设计</text>
+    <path d="M908 331H1011M1105 367V387H978V412" fill="none" stroke="#a4d5b5" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <circle cx="908" cy="331" r="5" fill="#a4d5b5"/><circle cx="1105" cy="367" r="5" fill="#a4d5b5"/>
+    <text x="719" y="568" fill="#9fc3af" font-size="18">知识地图 · 共享模块库 · 组装画布</text>
+    <text x="719" y="594" fill="#719680" font-size="14">结构示意 / Composition concept</text>
+  </g>
+</svg>
