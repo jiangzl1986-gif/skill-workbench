@@ -4,8 +4,9 @@ import json
 import uuid
 from pathlib import Path
 from datetime import datetime,timezone
+from .config import PROJECT
 
-POLICY_LOCK=Path(__file__).resolve().parents[3]/'config/content_navigation.lock.json'
+POLICY_LOCK=PROJECT/'config/content_navigation.lock.json'
 
 def plan(skill,manifest):
     if not POLICY_LOCK.is_file():return None

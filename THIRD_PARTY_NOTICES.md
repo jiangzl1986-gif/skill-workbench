@@ -123,3 +123,11 @@
 | npm | vite | 7.3.7 | MIT |
 | npm | yallist | 3.1.1 | ISC |
 | npm | zustand | 4.5.7 | MIT |
+
+## Windows 免安装分发
+
+免安装包包含 Python 解释器、标准库、后端运行依赖及预构建页面。Python 的完整许可与第三方通知随包保留为 `docs/dependency-licenses/Python-runtime-LICENSE.txt`；其 Tcl/Tk 运行资源及许可随打包资源提供。PyInstaller 使用 GPL-2.0 的打包分发例外，允许本程序保持 MIT；构建工具的许可文件也保留在包内通知目录。打包运行时与本程序的许可各自有效。
+
+The Windows portable archive includes Python, its standard library, backend dependencies and a prebuilt UI. Python's full license and bundled third-party notices are included, along with Tcl/Tk notices and packaging-tool license files. PyInstaller's distribution exception permits the application to retain its own MIT license. Imported content keeps its original license.
+
+Python 第三方许可另保留 `Python-incorporated-software.rst`、`runtime-tcl-LICENSE.txt` 和 `runtime-tk-LICENSE.txt`。安装程序使用官方 Inno Setup 6.7.3，保留其版权标识和 `installer-Inno-Setup-LICENSE.txt`。Inno Setup 由 Jordan Russell、Martijn Laan 开发，见 https://jrsoftware.org/。

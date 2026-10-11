@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.11.9'
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -21,3 +21,41 @@ jobs:
       - name: Test source fidelity and boundaries
         shell: pwsh
         run: ./.venv/Scripts/python.exe -B -X utf8 -m pytest -q
+      - name: Test launcher lifecycle
+        shell: pwsh
+        run: ./.venv/Scripts/python.exe -B -X utf8 tools/check_windows_gui.py --work "$env:RUNNER_TEMP/gui-acceptance"
+      - name: Build self-contained Windows app
+        shell: pwsh
+        run: |
+          ./.venv/Scripts/python.exe -m pip install -r requirements-build.lock.txt
+          ./.venv/Scripts/python.exe -B -X utf8 tools/build_windows.py --output "$env:RUNNER_TEMP/portable-build"
+      - name: Check relocated EXE without Python or Node on PATH
+        shell: pwsh
+        run: ./.venv/Scripts/python.exe -B -X utf8 tools/check_windows_bundle.py --bundle "$env:RUNNER_TEMP/portable-build/dist/启动工作台" --work "$env:RUNNER_TEMP/portable-acceptance"
+      - name: Prepare official installer compiler
+        shell: pwsh
+        run: |
+          $tool = "$env:RUNNER_TEMP/innosetup-6.7.3.exe"
+          Invoke-WebRequest 'https://github.com/jrsoftware/issrc/releases/download/is-6_7_3/innosetup-6.7.3.exe' -OutFile $tool
+          if ((Get-FileHash $tool -Algorithm SHA256).Hash.ToLower() -ne '9c73c3bae7ed48d44112a0f48e66742c00090bdb5bef71d9d3c056c66e97b732') { throw 'Compiler digest mismatch' }
+          if ((Get-AuthenticodeSignature $tool).Status -ne 'Valid') { throw 'Compiler signature invalid' }
+          $prepared = Start-Process -FilePath $tool -ArgumentList '/VERYSILENT','/SUPPRESSMSGBOXES','/CURRENTUSER','/PORTABLE=1','/NOICONS','/NORESTART',"/DIR=`"$env:RUNNER_TEMP/inno-compiler`"" -WindowStyle Hidden -Wait -PassThru
+          if ($prepared.ExitCode -ne 0) { throw 'Compiler preparation failed' }
+      - name: Build offline current-user installer
+        shell: pwsh
+        run: ./.venv/Scripts/python.exe -B -X utf8 tools/build_windows_installer.py --build "$env:RUNNER_TEMP/portable-build" --compiler "$env:RUNNER_TEMP/inno-compiler/ISCC.exe" --output "$env:RUNNER_TEMP/installer-build"
+      - name: Check actual installation, program bytes and data-retaining uninstall
+        shell: pwsh
+        run: ./.venv/Scripts/python.exe -B -X utf8 tools/check_windows_installer.py --build "$env:RUNNER_TEMP/portable-build" --installer "$env:RUNNER_TEMP/installer-build/skill-workbench-0.1.0-beta.2-windows-x64-setup.exe" --work "$env:RUNNER_TEMP/installer-acceptance"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows-x64-portable
+          path: |
+            ${{ runner.temp }}/portable-build/*.zip
+            ${{ runner.temp }}/portable-build/SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows-x64-installer
+          path: |
+            ${{ runner.temp }}/installer-build/*.exe
+            ${{ runner.temp }}/installer-build/SHA256SUMS.txt

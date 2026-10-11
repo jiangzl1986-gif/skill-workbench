@@ -1,4 +1,29 @@
-# 0.1.0-beta.1 验收范围
+# 发布验收范围 / Release validation scope
+
+## Windows 免安装包：0.1.0-beta.2
+
+此轮只扩展打包、冻结资源定位和启动窗口，保留原功能与完整契约。源码环境用于构建，实际成品 EXE 的检查由独立进程执行，不导入应用实现作为答案。
+
+| 检查 | 结果与实际范围 |
+| --- | --- |
+| 原回归 | 32 项通过；既有规则、权限、容量与来源保真约束继续检查。 |
+| 成品冷启动 | 清除 PYTHONHOME、PYTHONPATH 等外部环境，PATH 仅保留 Windows 系统目录，确认找不到 Python 和 Node。迁移到包含中文与空格的完整解压目录，EXE 启动成功，内置 Python DLL 与应用资源路径均位于解压目录。 |
+| 原功能与保真 | 独立 HTTP 进程导入两个公开示例，保存跨来源内部组合并导出；以 JSON/gzip/base64/SHA-256 核对原文件实际字节与设计正文哈希，不调用索引器或组装实现。 |
+| 生命周期与拒绝 | 退出后重新启动，来源与草稿保留；第二实例占用同端口时拒绝启动，原服务继续运行且没有创建冲突运行资料。无会话、错误 Host、错误 CSRF、过期草稿均按契约拒绝。 |
+| 启动窗口 | 在本应用隐藏测试窗口调用实际 Tk 按钮回调，检查服务就绪后打开浏览器、重新打开和正常退出。此项检查运行源程序窗口回调，不冒充对另一电脑成品界面的人工检查。 |
+| 实际浏览器 | 使用成品 EXE 提供的页面，载入完整结构，进入父模块，加入另一 Skill 的小模块、内部连线、保存并实际下载设计。另行核对下载文件的完整正文、内部来源位置及连线和原文件字节。 |
+| 公开包 | 仅程序、内置运行时、已构建界面、原创公开示例、文档和依赖许可；不收录数据库、用户资料、私人 Skill 或授权信息。 |
+| 安装与卸载 | 在新的中文与空格目录静默安装，逐文件核对成品清单哈希；直接启动已安装 EXE，验证无需外部 Python/Node 的环境路径、页面与空白工作空间；本次测试卸载后，目录外用户资料字节保留。测试不创建个人桌面/菜单入口，不覆盖任何既有安装。 |
+
+源程序窗口检查在 `tools/check_windows_gui.py`，成品独立检查在 `tools/check_windows_bundle.py`，复建脚本在 `tools/build_windows.py`。相同流程加入 Windows CI；CI 成功记录见仓库 Actions。
+
+安装程序编译与独立验收在 `tools/build_windows_installer.py`、`tools/check_windows_installer.py`。仅检查自己的新测试安装；发现已登记安装时测试停止。安装向导为英文；完整交互向导和桌面图标尚未作为另一实体电脑的人工验收。
+
+Windows x64 以外的平台、第二台用户实体电脑、数字签名及任意 Skill 的业务执行质量尚未验证或完成。无环境路径检查证明此次成品运行不需要外部 Python/Node，不等同于全部电脑、全部安全策略已兼容。
+
+English: all 32 existing regression checks passed. A relocated packaged EXE was tested independently with Python and Node absent from PATH, including source fidelity, nested composition, export, rejection boundaries and restart persistence. Source-program Tk callbacks and real-browser editing/download were checked separately. The checks do not establish compatibility with every computer, security policy or Skill. The Windows x64 EXE is currently unsigned; a second physical user computer and other platforms remain unvalidated.
+
+## 历史：0.1.0-beta.1 验收范围
 
 本页记录首个公开测试版的验证边界。程序测试、独立文件核对、真实浏览器操作和 Skill 实际业务执行分别记录。
 

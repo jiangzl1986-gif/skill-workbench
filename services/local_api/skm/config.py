@@ -1,8 +1,8 @@
 """Portable locations and frozen, inspectable workbench contract."""
 from pathlib import Path
-import hashlib, json, os
+import hashlib, json, os, sys
 
-PROJECT = Path(__file__).resolve().parents[3]
+PROJECT = Path(sys._MEIPASS) if getattr(sys, 'frozen', False) else Path(__file__).resolve().parents[3]
 DEFAULT_RUNTIME = Path(os.environ.get('LOCALAPPDATA', str(Path.home() / '.local/share'))) / 'skill-workbench'
 RUNTIME = Path(os.environ.get('SKM_RUNTIME', str(DEFAULT_RUNTIME))).expanduser().resolve()
 if str(RUNTIME).startswith('\\\\'):

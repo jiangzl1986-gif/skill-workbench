@@ -82,22 +82,17 @@ flowchart LR
 
 ## 快速开始（Windows）
 
-当前界面为中文。首次准备需要 **Python 3.11** 和 **Node.js 22 LTS**；工作台本身不需要模型 API Key，也不调用付费服务。
+1. 下载 [Windows 安装包](https://github.com/jiangzl1986-gif/skill-workbench/releases)，选择 **windows-x64-setup.exe**。
+2. 双击安装程序，点击 **Install**；完成后打开 **Skill Workbench**，浏览器会自动显示工作台。以后可从桌面或开始菜单打开。
+3. 到“导入与同步”选择自己的 Skill，或先用安装目录 `examples` 中的两个公开示例体验跨来源组装。
 
-1. 下载 [Windows 发布包](https://github.com/jiangzl1986-gif/skill-workbench/releases)，解压到独立项目目录。也可以从仓库的 **Code → Download ZIP** 下载源码。
-2. 双击 `setup.cmd`，创建独立 Python 环境、安装锁定依赖并构建页面。首次准备需要联网从 PyPI 和 npm 下载依赖。
-3. 双击 `start.cmd`，浏览器打开 `http://127.0.0.1:8770/`。到“导入与同步”选择自己的 Skill，或先用 `examples` 中的两个公开示例体验跨来源组装。
+**不需要自己安装 Python、Node.js，不需要运行 setup，也不需要联网安装依赖。** 当前支持 Windows x64，工作台界面为中文，安装向导为英文。使用时保留启动窗口，点 **退出工作台** 正常停止服务。
 
-保持启动窗口运行；按 `Ctrl+C` 退出。可运行 `create_shortcut.ps1` 创建桌面入口。详细操作与故障处理见 [使用指南](docs/USER_GUIDE.md)。
+不想安装时，可选 **windows-x64-portable.zip**，完整解压后双击 **启动工作台.exe**；保留旁边的 `_internal` 文件夹。安装程序和 EXE 暂未取得 Windows 数字签名。
 
-开发者也可以使用：
+资料默认保存在本机 `%LOCALAPPDATA%\skill-workbench`，与程序目录和 Skill 原来源分开。[免安装说明](docs/WINDOWS_PORTABLE.md) · [详细使用指南](docs/USER_GUIDE.md)
 
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\setup.ps1
-powershell -NoProfile -ExecutionPolicy Bypass -File .\start.ps1
-```
-
-运行资料默认存放于本机 `%LOCALAPPDATA%\skill-workbench`，与程序目录和 Skill 源目录分开。需要调整时，可用 `start.ps1 -Runtime D:\MySkillWorkbenchData -Port 8771` 选择新的独立本地目录和端口。
+**源码开发者**：原源码方式继续保留，需 Python 3.11 与 Node.js 22 LTS；运行 `setup.cmd` 准备后，再运行 `start.cmd`。启动参数与开发细节见使用指南。
 
 ## 数据、许可与当前边界
 
@@ -111,7 +106,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\start.ps1
 
 已在同一台 Windows 电脑的独立环境和公开示例上验证导入、来源保真、整体与内部组装、保存导出、版本采用和错误拒绝，32 个回归测试项通过。第二台全新电脑、其他操作系统、任意 Skill 的业务语义及实际执行尚未验证。[验收范围](docs/RELEASE_VALIDATION.md)
 
-当前程序版本标识 `0.1.0-beta.1` 用于下载、更新与追溯。知识 / 经验 / 证据库、接口冲突提示、自动分发与实际调用回执、更多平台和安装体验列入 [路线图](docs/ROADMAP.md)，目前不作为已实现能力宣传。
+当前程序版本标识 `0.1.0-beta.2` 用于下载、更新与追溯。知识 / 经验 / 证据库、接口冲突提示、自动分发与实际调用回执、更多平台和安装体验列入 [路线图](docs/ROADMAP.md)，目前不作为已实现能力宣传。
 
 欢迎通过 [Issues](https://github.com/jiangzl1986-gif/skill-workbench/issues) 分享创作场景、反馈问题，或按 [贡献指南](CONTRIBUTING.md) 提交 Pull Request。请使用可公开的最小示例，保留自己的私人 Skill、账号、密钥和项目资料。
 
@@ -185,22 +180,17 @@ Canvas connections express your design. **An executable Skill still requires int
 
 ## Getting started — Windows
 
-The current application UI is Chinese. Install **Python 3.11** and **Node.js 22 LTS** first. The workbench itself needs no model API key and makes no paid-service calls.
+1. Download the [Windows installer](https://github.com/jiangzl1986-gif/skill-workbench/releases), choosing **windows-x64-setup.exe**.
+2. Double-click it and choose **Install**. Open **Skill Workbench** when finished; your browser opens automatically. Desktop and Start menu shortcuts are available for later use.
+3. Import your Skill through “导入与同步”, or try the two public examples in the installed `examples` folder.
 
-1. Download the [Windows release archive](https://github.com/jiangzl1986-gif/skill-workbench/releases) and extract it into a separate project directory. The repository's **Code → Download ZIP** source archive also works.
-2. Run `setup.cmd` to create an isolated Python environment, install pinned dependencies and build the frontend. Initial setup downloads dependencies from PyPI and npm.
-3. Run `start.cmd`. Your browser opens `http://127.0.0.1:8770/`. Use the import-and-sync page to add your own Skill, or try the two public Skills under `examples/` for a cross-source composition.
+**No separate Python, Node.js, setup command or online dependency installation is needed.** The package targets Windows x64; the workbench UI is Chinese and the installer wizard is English. Keep the launcher open and click **退出工作台** to stop the service.
 
-Keep the launcher running; press `Ctrl+C` to stop. Run `create_shortcut.ps1` to create a desktop shortcut. Detailed instructions and troubleshooting are in the [user guide (Chinese)](docs/USER_GUIDE.md).
+For a portable option, download **windows-x64-portable.zip**, extract the complete archive and double-click **启动工作台.exe**. Keep `_internal` beside the EXE. The installer and app are currently unsigned.
 
-Developers can also run:
+Data defaults to the local `%LOCALAPPDATA%\skill-workbench`, separate from the program and original Skill directories. [Portable instructions](docs/WINDOWS_PORTABLE.md) · [Detailed user guide (Chinese)](docs/USER_GUIDE.md)
 
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\setup.ps1
-powershell -NoProfile -ExecutionPolicy Bypass -File .\start.ps1
-```
-
-Runtime data defaults to the local `%LOCALAPPDATA%\skill-workbench`, separate from the application and source Skill folders. Use `start.ps1 -Runtime D:\MySkillWorkbenchData -Port 8771` to choose a new, independent local directory and another port.
+**Source developers**: the original source installation remains available. Install Python 3.11 and Node.js 22 LTS, run `setup.cmd`, then `start.cmd`. See the user guide for startup parameters and development details.
 
 ## Data, licenses and current boundaries
 
@@ -214,6 +204,6 @@ Runtime data defaults to the local `%LOCALAPPDATA%\skill-workbench`, separate fr
 
 Import, source fidelity, outer and nested assembly, saving and export, explicit version adoption and invalid-input rejection were checked in isolated environments on the same Windows computer using public examples; 32 regression checks passed. A second fresh physical computer, other operating systems, arbitrary Skills' business semantics and actual execution have not been validated. [Validation scope (Chinese)](docs/RELEASE_VALIDATION.md)
 
-The internal program identifier `0.1.0-beta.1` supports downloads, updates and traceability. Unified knowledge / experience / evidence libraries, interface-conflict guidance, automatic distribution and actual usage receipts, more platforms and installation improvements remain on the [roadmap (Chinese)](docs/ROADMAP.md); they are not advertised as implemented features.
+The internal program identifier `0.1.0-beta.2` supports downloads, updates and traceability. Unified knowledge / experience / evidence libraries, interface-conflict guidance, automatic distribution and actual usage receipts, more platforms and installation improvements remain on the [roadmap (Chinese)](docs/ROADMAP.md); they are not advertised as implemented features.
 
 Share creation scenarios and issues through [GitHub Issues](https://github.com/jiangzl1986-gif/skill-workbench/issues), or submit a Pull Request using the [contribution guide](CONTRIBUTING.md). Use a minimal public example and keep private Skills, accounts, credentials and project materials out of reports.
