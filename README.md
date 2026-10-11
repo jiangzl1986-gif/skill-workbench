@@ -1,87 +1,219 @@
-# Skill Workbench · AI Skill 无限创作画布
+# Skill Workbench · 可视化 Skill 创作工作台
 
-**把已有 Skill 看清楚，把新的 Skill 画出来。**
+**让 Skill 可视化，让创作过程看得见。**
 
-用无限画布的交互方式，创作、整理、归纳和重组 AI Skill。画布可以缩放、平移和拖拽。把散落的规则、文件和大小模块带进同一个工作空间：看懂它们的来源，调整组合方式，保留修改意图，再交给开发者完成实际接入。
+**An infinite canvas for visual AI Skill creation.**
 
-[English](README.en.md) · [快速开始](#快速开始windows) · [使用指南](docs/USER_GUIDE.md) · [路线图](docs/ROADMAP.md) · [贡献](CONTRIBUTING.md)
+Skill Workbench 把 Skill 的结构、规则和模块带到可缩放、可平移的画布上。你可以看清已有 Skill，设计新的 Skill，把不同来源的大小模块重新搭配，再将完整设计交给自己的 Agent 或开发者完成接入。
 
-![Skill Workbench 工作空间](docs/images/workbench.png)
+See how existing AI Skills are built, design new ones on a visual canvas, and combine modules from different sources. Export the complete design to your agent or developer for integration.
 
-## 为什么做它
+[中文介绍](#中文介绍) · [English on this page](#english) · [English README](README.en.md) · [下载 / Download](https://github.com/jiangzl1986-gif/skill-workbench/releases) · [使用指南 / User guide](docs/USER_GUIDE.md)
 
-Skill 越来越多，却很难回答几个简单问题：它有哪些模块？哪些规则藏在文件里？我想把 A 的一个小模块放进 B，应该改哪个位置？改过以后，原来的规则还完整吗？
+![Skill Workbench：知识地图、共享模块库与组装画布 / Knowledge maps, a shared module library and an assembly canvas](docs/images/workbench.png)
 
-Skill Workbench 提供一张可以思考和修改的画布。你可以从已有 Skill 开始，也可以创建空白方案；将不同来源的模块放在一起，在大模块内部加入、替换或移除小模块，画出希望的交接，并把整个设计交给自己的 AI 开发助手或开发者。
+<a id="中文介绍"></a>
+## 为什么需要一个可视化的 Skill 工作台
 
-## 第一版能做什么
+用文字和 Agent 讨论 Skill 很方便，但随着规则和文件变多，你可能很难看清：已经做出了哪些模块？某条规则放在哪里？两个模块怎样交接？把别人的一个小模块接进来，应该放到哪个位置？
 
-| 功能 | 你可以怎样使用 |
-| --- | --- |
-| **Skill 创作与组装画布** | 创建新方案，拖入模块，调整布局、缩放和平移；用连线表达希望的交接，直接剪断错误连接，保留两端模块。 |
-| **进入大模块内部编辑** | 查看父子层级，在指定位置加入、替换或移除小模块；不同位置独立保留，内部也能连接和剪线。 |
-| **整个 Skill 作为起点** | 将一个已导入 Skill 的完整结构载入新草稿，再按自己的思路修改；自动结构载入不会编造执行连线。 |
-| **跨 Skill 共享模块库** | 集中浏览和搜索所有来源模块，按来源、大小模块筛选；每张卡都保留来源 Skill、版本、文件和原文范围。 |
-| **知识地图** | 从整个 Skill 深入到模块、文件、规则和引用，查看完整原文与行号；搜索中文内容并回到对应位置。 |
-| **本机导入** | 指定文件夹、拖入完整目录或 ZIP、在指定目录查找 Skill；先预览内容，再决定是否接入。无需先安装到 Agent。 |
-| **版本核对与同步** | 核对原目录变化，预览并明确采用新版；原快照、历史版本和旧草稿保留，不静默升级。 |
-| **保存与导出** | 保存组装草稿、重新打开继续修改，导出带原文、来源校验和内部位置关系的设计包。 |
-| **开发交接** | 记录维护意见，导出分析任务和方案；生成准确版本的只读分析指令，交给选定对话框。 |
-| **发布状态查看** | 区分正式来源、本机安装、工作台登记和实际使用。未配置凭证时显示未知，复制指令不会伪装成已调用。 |
+Skill Workbench 为这个过程提供一个可见、可修改、可交接的工作空间。**把想法画出来，把结构看清楚，把修改位置说明白。** 文字仍可用于描述目标和接入要求，画布则让你直接表达模块的位置、组合与连接。
 
-画布帮助你把想法做成可检查的设计。**导出的设计包还需要开发接入和独立验证，拖好模块不会自动生成一个可执行的新 Skill。** 源文件保持只读；画布删除不等于豁免原规则。
+## 用它可以怎样创作和整理 Skill
 
-## 一个典型创作过程
+### 1. 让已有 Skill 可视化，先看懂再修改
+
+导入自己的 Skill 后，在知识地图中逐层查看整个 Skill、大模块、小模块、文件、规则与引用。点选节点即可回到原文、行号和来源，搜索内容也能定位到具体位置。
+
+你可以用它梳理一个不熟悉的 Skill、检查自己的规则放在哪里，或在与 Agent 沟通时明确指出“要调整这个模块的这个位置”。Skill 的结构不再只存在于文件目录和聊天记录里。
+
+### 2. 用无限画布做模块化创作，把新的 Skill 画出来
+
+从空白方案开始，或者载入已有 Skill 的整套结构作为起点。拖入模块，缩放和平移画布，调整布局，用连线表达模块之间希望怎样交接。
+
+创作可以深入到大模块内部：在指定位置加入、替换、移除小模块，再连接内部小模块。连错时剪断这条线，保留模块继续调整。你可以先搭出未来 Skill 的结构，再逐步补充目标、交接条件与接入要求。
+
+### 3. 把不同 Skill 的模块放进同一个仓库，重新搭配
+
+导入自己的已有 Skill，或你有权研究和复用的外部 Skill，**不需要先把它安装到 Agent**。工作台会从文件、标题和引用中提取可供检查的模块结构，集中展示在组装台的共享模块库中。
+
+不用在多个 Skill 之间反复切换才能挑选模块：可以跨来源搜索、按来源和大小模块筛选，查看每个模块来自哪个 Skill、哪个版本、哪个文件和原文范围。选出合适的内容，把 A 的模块放进 B 的草稿，或组合成一个新的方案，再交给 Agent 完成实际接入。
+
+### 4. 整理正在使用、正在开发和未来要做的 Skill
+
+对已经安装的 Skill，导入其目录，梳理现有结构；对正在开发的 Skill，导入开发目录，检查模块并维护修改草稿；对未来需要的新 Skill，先创建空白方案，规划它需要哪些能力和模块。
+
+当原目录更新后，可以核对变化、预览新版并明确采用。旧快照与旧草稿保留原来的版本，让“来源已经更新”和“当前方案采用了哪个版本”都可追溯。
+
+## 从想法到开发交接
 
 ```mermaid
 flowchart LR
-  A[导入自己的 Skill] --> B[知识地图看清结构]
-  B --> C[共享模块库挑选内容]
-  C --> D[画布创作与内部组装]
-  D --> E[保存并导出完整设计]
-  E --> F[开发者核验接口与规则后接入]
-  F --> G[确认新版本后同步地图]
+  A[导入已有 Skill] --> B[知识地图看清结构与原文]
+  B --> C[共享模块库跨来源选取]
+  C --> D[画布设计整体与内部模块]
+  N[新 Skill 的空白方案] --> D
+  D --> E[保存草稿与导出完整设计]
+  E --> F[交给 Agent 或开发者核验并接入]
+  F --> G[新版本确认后同步工作台]
 ```
 
-例如：你已有“笔记转大纲” Skill，又导入“证据复核” Skill。可以载入前者的整套结构，进入“大纲设计”模块内部，把后者的“证据检查”放在想要的位置，写清输入输出，保存并导出。原来的两份 Skill 都完整保留。
+例如，你想给“笔记转大纲” Skill 增加证据复核能力。先导入它和“证据复核” Skill，载入前者的整套结构，进入“大纲设计”内部，把后者的“证据检查”加入指定位置，连接并写明交接意图。保存设计后，把导出的 JSON 交给自己的 Agent：它可以依据来源原文、版本和你的布局，分析接口与规则，再实施经过确认的方案。两份原 Skill 都保留。
 
-![在大模块内部融合另一份 Skill 的小模块](docs/images/inner-composition.png)
+![在大模块内部接入另一份 Skill 的小模块 / Combining a submodule from another Skill inside a parent module](docs/images/inner-composition.png)
+
+## 具体功能
+
+| 功能 | 你可以做什么 |
+| --- | --- |
+| **知识地图** | 逐层查看 Skill、模块、文件、规则和引用；读取原文与行号，搜索并定位内容。 |
+| **无限画布交互** | 创建空白方案或载入整套结构；拖拽布局、缩放、平移，在同一空间组织多个模块。 |
+| **内部组装** | 进入大模块，在具体父子位置加入、替换、移除小模块；保存时保留层级与位置。 |
+| **连线与剪线** | 用端口拖拽或依次点选连接，填写交接意图；单独剪断错误的线，保留两端模块。 |
+| **共享模块库** | 集中搜索所有已导入来源；按 Skill 和模块层级筛选，查看来源、版本、文件及原文范围。 |
+| **本机导入与发现** | 指定目录、选择或拖入完整文件夹、上传 ZIP；在你指定的目录查找 Skill，预览后选择接入。 |
+| **版本核对与同步** | 核对来源变化，预览并明确采用新版；旧快照、旧版本与旧草稿保留。 |
+| **草稿保存与继续编辑** | 保存方案、重新打开，并继续调整整体结构或内部小模块。 |
+| **完整设计包导出** | 导出原文件内容、来源版本、字节校验、父子位置、连线及接入要求，交给 Agent 或开发者。 |
+| **维护交接** | 记录维护意见、导出分析任务，生成指向准确登记版本的只读分析指令。 |
+| **发布与调用状态** | 分别查看工作台登记、正式发布凭证、本机安装和实际使用；没有凭证时显示未知。 |
+
+画布上的连线表达你的设计。**实际可执行的 Skill 仍需要 Agent 或开发者完成接口接入、规则核验和独立验证。** 工作台导出完整设计，由你交给目标对话框；复制指令不会自动发送或证明已经调用。自动提取的文件层级和引用也不会被当成已经验证的执行流程。
 
 ## 快速开始（Windows）
 
-首版是 **0.1.0-beta.1 本地测试版**，界面为中文。首次安装需 Python 3.11 和 Node.js 22 LTS；不需要模型 API Key，不需要付费服务。
+当前界面为中文。首次准备需要 **Python 3.11** 和 **Node.js 22 LTS**；工作台本身不需要模型 API Key，也不调用付费服务。
 
-1. 下载 [最新版本](https://github.com/jiangzl1986-gif/skill-workbench/releases)，解压到自己的项目目录。也可以从仓库的 **Code → Download ZIP** 下载源码。
-2. 双击 `setup.cmd`：创建独立 Python 环境、安装锁定依赖并构建页面。首次准备会从 PyPI 和 npm 下载依赖，需要联网。
-3. 双击 `start.cmd`：浏览器打开 `http://127.0.0.1:8770/`。到“导入与同步”选择自己的 Skill，或先使用 `examples` 内的两个公开示例。
+1. 下载 [Windows 发布包](https://github.com/jiangzl1986-gif/skill-workbench/releases)，解压到独立项目目录。也可以从仓库的 **Code → Download ZIP** 下载源码。
+2. 双击 `setup.cmd`，创建独立 Python 环境、安装锁定依赖并构建页面。首次准备需要联网从 PyPI 和 npm 下载依赖。
+3. 双击 `start.cmd`，浏览器打开 `http://127.0.0.1:8770/`。到“导入与同步”选择自己的 Skill，或先用 `examples` 中的两个公开示例体验跨来源组装。
 
-启动窗口保持运行；按 `Ctrl+C` 退出服务。可运行 `create_shortcut.ps1` 创建桌面入口。详情与故障处理见 [使用指南](docs/USER_GUIDE.md)。
+保持启动窗口运行；按 `Ctrl+C` 退出。可运行 `create_shortcut.ps1` 创建桌面入口。详细操作与故障处理见 [使用指南](docs/USER_GUIDE.md)。
 
-喜欢命令行的开发者也可以使用：
+开发者也可以使用：
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File .\setup.ps1
 powershell -NoProfile -ExecutionPolicy Bypass -File .\start.ps1
 ```
 
-程序代码可以放资料盘；数据库、版本快照和构建缓存默认放在本机 `%LOCALAPPDATA%\skill-workbench`。用 `start.ps1 -Runtime D:\MySkillWorkbenchData -Port 8771` 选择独立本地运行目录和端口。请使用新的独立目录，不要与 Skill 源目录混放。
+运行资料默认存放于本机 `%LOCALAPPDATA%\skill-workbench`，与程序目录和 Skill 源目录分开。需要调整时，可用 `start.ps1 -Runtime D:\MySkillWorkbenchData -Port 8771` 选择新的独立本地目录和端口。
 
-## 数据与边界
+## 数据、许可与当前边界
 
-- 导入内容留在本机。程序不执行 Skill 脚本、不自动安装 Skill、不调用模型或生产 API。
-- 程序在本地监听 `127.0.0.1`，包含本机会话、跨站访问和请求校验；首版不作为公网或多人服务器使用。
-- 解析的是文件、标题和引用结构。来源结构、设计连线、可执行流程是不同含义；未知依赖和规则冲突仍需开发者核验。
-- 为完整核验设置了明确边界：每源最多 5000 文件 / 32 MiB；单文件、ZIP、请求及最终设计包最多 2 MiB；顶层最多 60 模块实例 / 120 连线。超限会拒绝，不截断资料。[完整契约](docs/WORKBENCH_CONTRACT.md)
-- 使用你有权读取和复用的 Skill。程序的 MIT 许可不改变导入内容的原许可。
+- 导入资料留在本机，原来源只读。程序不执行导入的脚本、不自动安装 Skill、不调用模型或生产 API。
+- 导入和画布修改保留原文与来源。移除设计位置不会删除源文件，也不会自动豁免原规则、模板和质量要求。
+- 服务只监听 `127.0.0.1`，包含本机会话、跨站访问与请求校验；当前不作为公网或多人服务器使用。
+- 每个来源最多 5000 文件 / 32 MiB；单文件、ZIP、API 请求、完整草稿及最终设计包最多 2 MiB；顶层最多 60 模块实例 / 120 连线，坐标范围 ±20000。无限画布描述缩放、平移和自由布局的交互，容量仍有明确边界。超限会拒绝，不截断资料。[完整契约](docs/WORKBENCH_CONTRACT.md)
+- 程序采用 [MIT](LICENSE)。导入内容的原许可和复用权限继续有效；依赖许可见 [第三方说明](THIRD_PARTY_NOTICES.md)。
 
-## 版本状态
+## 验证范围与后续计划
 
-本版本在 Windows 的独立环境和公开样例上验证，覆盖空白启动、完整导入、来源保真、跨来源设计、内部编辑、保存导出、版本采纳以及错误拒绝。完整的全新电脑安装、其他操作系统、任意 Skill 的业务语义与实际运行尚未验证。[验收范围](docs/RELEASE_VALIDATION.md)
+已在同一台 Windows 电脑的独立环境和公开示例上验证导入、来源保真、整体与内部组装、保存导出、版本采用和错误拒绝，32 个回归测试项通过。第二台全新电脑、其他操作系统、任意 Skill 的业务语义及实际执行尚未验证。[验收范围](docs/RELEASE_VALIDATION.md)
 
-**后续计划**：统一知识 / 经验 / 证据库、更加清楚的接口和冲突提示、项目与对话框的实际调用回执、更多平台及安装体验。详见 [路线图](docs/ROADMAP.md)。
+当前程序版本标识 `0.1.0-beta.1` 用于下载、更新与追溯。知识 / 经验 / 证据库、接口冲突提示、自动分发与实际调用回执、更多平台和安装体验列入 [路线图](docs/ROADMAP.md)，目前不作为已实现能力宣传。
 
-## 一起完善
+欢迎通过 [Issues](https://github.com/jiangzl1986-gif/skill-workbench/issues) 分享创作场景、反馈问题，或按 [贡献指南](CONTRIBUTING.md) 提交 Pull Request。请使用可公开的最小示例，保留自己的私人 Skill、账号、密钥和项目资料。
 
-欢迎用 [Issues](https://github.com/jiangzl1986-gif/skill-workbench/issues) 提出使用问题和创作场景，也欢迎提交 Pull Request。报告问题时请使用最小公开示例，保留私有 Skill、账号、密钥和项目资料。
+---
 
-采用 [MIT](LICENSE) 许可。前端与后端依赖保留各自许可，见 [第三方说明](THIRD_PARTY_NOTICES.md)。
+<a id="english"></a>
+## Why a visual workspace for AI Skills?
+
+Text conversations with an agent are useful for building a Skill. As its rules and files grow, it becomes harder to see which modules exist, where a rule belongs, how two modules should hand off their work, or where a submodule from another Skill should fit.
+
+Skill Workbench gives that process a visible, editable workspace. **Sketch your ideas, inspect the structure, and show exactly where a change belongs.** Use text to explain goals and integration requirements, and the canvas to express module placement, composition and connections.
+
+## What you can create and organize
+
+### 1. Visualize existing Skills before changing them
+
+Import a Skill and explore its knowledge map from the whole Skill down to modules, submodules, files, rules and references. Open a node to read its original content, source and line numbers. Search brings you back to the relevant location.
+
+Inspect an unfamiliar Skill, locate your own rules, or point your agent to the exact module and position you want to change. The structure becomes visible beyond folders and conversation history.
+
+### 2. Design new Skills with modular composition on an infinite canvas
+
+Start with a blank design or load an imported Skill's complete structure. Add modules, zoom and pan, arrange the layout, and draw connections to describe intended handoffs.
+
+Work inside a parent module too: add, replace or remove submodules at specific positions, then connect them internally. Cut an incorrect link while keeping both modules. Plan the structure of a future Skill first, then develop its goals, handoff conditions and integration requirements.
+
+### 3. Reuse modules across Skills in one shared library
+
+Import your existing Skills or external Skills you are permitted to study and reuse, **without first installing them into an agent**. The workbench extracts inspectable structure from files, headings and references, then brings those module candidates into a shared assembly library.
+
+Search across sources and filter by Skill or module level. Each module retains its source Skill, version, file and original content range. Put a module from A into a draft based on B, or combine several sources into a new design, then give your agent the complete design for integration.
+
+### 4. Organize installed Skills, work in progress and future ideas
+
+Import installed Skill directories to inspect their structure. Import development folders to review modules and maintain revision drafts. For a Skill you have not built yet, create a blank design and plan the capabilities and modules it needs.
+
+When a source directory changes, inspect the differences and explicitly adopt a new version. Earlier snapshots and drafts retain their original versions, so both source updates and design dependencies remain traceable.
+
+## From an idea to an integration handoff
+
+```mermaid
+flowchart LR
+  A[Import existing Skills] --> B[Inspect maps and original content]
+  B --> C[Choose modules across sources]
+  C --> D[Design outer and nested composition]
+  N[Blank design for a new Skill] --> D
+  D --> E[Save and export a complete design]
+  E --> F[Agent or developer validates and integrates]
+  F --> G[Adopt the confirmed version in the workbench]
+```
+
+For example, add evidence review to a notes-to-outline Skill. Import both Skills, load the outline Skill's structure, enter its outline-design module, and place an evidence-check submodule from the other source at the intended position. Connect it, describe the handoff and save. Give the exported JSON to your agent so it can inspect original rules, versions and placement, resolve interfaces, and implement the confirmed design. Both original Skills remain available.
+
+## Features and practical uses
+
+| Feature | What you can do |
+| --- | --- |
+| **Knowledge maps** | Explore Skills, modules, files, rules and references; read original content and line numbers, search and locate details. |
+| **Infinite-canvas interaction** | Start from a blank design or a complete imported structure; drag modules, zoom and pan to organize a composition. |
+| **Nested assembly** | Add, replace or remove submodules at specific parent positions, preserving hierarchy and placement in saved designs. |
+| **Connections and scissors** | Drag between ports or click ports in sequence; record handoff intent and cut one link without deleting either module. |
+| **Shared module library** | Search every imported source together; filter by Skill and module level, with source, version, file and content-range labels. |
+| **Local import and discovery** | Select a directory, choose or drag a complete folder, upload a ZIP, or discover Skills within a directory you specify; preview before adoption. |
+| **Version checks and synchronization** | Inspect source changes and explicitly adopt a new version while retaining old snapshots, versions and drafts. |
+| **Saved drafts** | Save, reopen and continue editing outer structures or internal submodules. |
+| **Complete design exports** | Export original file content, versions, byte checksums, parent positions, connections and integration requirements for an agent or developer. |
+| **Maintenance handoffs** | Record change requests, export analysis tasks and generate read-only analysis instructions for an exact registered version. |
+| **Release and usage states** | Separate workbench registration, formal release evidence, local installation and actual usage; missing evidence stays unknown. |
+
+Canvas connections express your design. **An executable Skill still requires interface integration, rule checks and independent validation by an agent or developer.** You pass the exported design to your chosen conversation; copying an instruction does not send it or prove usage. Automatically extracted file hierarchies and references are not treated as validated execution flows.
+
+## Getting started — Windows
+
+The current application UI is Chinese. Install **Python 3.11** and **Node.js 22 LTS** first. The workbench itself needs no model API key and makes no paid-service calls.
+
+1. Download the [Windows release archive](https://github.com/jiangzl1986-gif/skill-workbench/releases) and extract it into a separate project directory. The repository's **Code → Download ZIP** source archive also works.
+2. Run `setup.cmd` to create an isolated Python environment, install pinned dependencies and build the frontend. Initial setup downloads dependencies from PyPI and npm.
+3. Run `start.cmd`. Your browser opens `http://127.0.0.1:8770/`. Use the import-and-sync page to add your own Skill, or try the two public Skills under `examples/` for a cross-source composition.
+
+Keep the launcher running; press `Ctrl+C` to stop. Run `create_shortcut.ps1` to create a desktop shortcut. Detailed instructions and troubleshooting are in the [user guide (Chinese)](docs/USER_GUIDE.md).
+
+Developers can also run:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\setup.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File .\start.ps1
+```
+
+Runtime data defaults to the local `%LOCALAPPDATA%\skill-workbench`, separate from the application and source Skill folders. Use `start.ps1 -Runtime D:\MySkillWorkbenchData -Port 8771` to choose a new, independent local directory and another port.
+
+## Data, licenses and current boundaries
+
+- Imported content stays local and source directories are read-only. The application does not execute imported scripts, automatically install Skills or call model or production APIs.
+- Imports and canvas changes retain original content and provenance. Removing a design position does not delete source files or waive original rules, templates or quality requirements.
+- The service binds only to `127.0.0.1`, with local-session, cross-site and request checks. It is not currently a public or multi-user server.
+- Each source allows up to 5000 files / 32 MiB. Individual files, ZIPs, API requests, complete drafts and final design packages are capped at 2 MiB; outer drafts allow 60 module instances / 120 links, with coordinates within ±20000. Infinite canvas describes zoom, pan and free arrangement; capacity remains bounded. Oversized inputs are rejected without truncation. [Full contract (Chinese)](docs/WORKBENCH_CONTRACT.md)
+- [MIT](LICENSE) covers this program. Imported content keeps its original license and reuse permissions. Dependencies retain their licenses; see [third-party notices](THIRD_PARTY_NOTICES.md).
+
+## Validation and future work
+
+Import, source fidelity, outer and nested assembly, saving and export, explicit version adoption and invalid-input rejection were checked in isolated environments on the same Windows computer using public examples; 32 regression checks passed. A second fresh physical computer, other operating systems, arbitrary Skills' business semantics and actual execution have not been validated. [Validation scope (Chinese)](docs/RELEASE_VALIDATION.md)
+
+The internal program identifier `0.1.0-beta.1` supports downloads, updates and traceability. Unified knowledge / experience / evidence libraries, interface-conflict guidance, automatic distribution and actual usage receipts, more platforms and installation improvements remain on the [roadmap (Chinese)](docs/ROADMAP.md); they are not advertised as implemented features.
+
+Share creation scenarios and issues through [GitHub Issues](https://github.com/jiangzl1986-gif/skill-workbench/issues), or submit a Pull Request using the [contribution guide](CONTRIBUTING.md). Use a minimal public example and keep private Skills, accounts, credentials and project materials out of reports.
