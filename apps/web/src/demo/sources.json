@@ -1,0 +1,681 @@
+{
+  "schema_version": 1,
+  "license": "MIT (only these independently authored public examples)",
+  "files": [
+    {
+      "id": "notes-to-outline/SKILL.md",
+      "source_skill_id": "notes-to-outline",
+      "path": "notes-to-outline/SKILL.md",
+      "sha256": "53e0de91333362530bed24efb797873a79607bd03815fd25f6fa7650d87862b6",
+      "bytes": 755,
+      "encoding": "utf-8",
+      "original_base64": "LS0tCm5hbWU6IG5vdGVzLXRvLW91dGxpbmUKZGVzY3JpcHRpb246IOaKiueUqOaIt+aPkOS+m+eahOeslOiusOaVtOeQhuaIkOacieadpea6kOeahOaWh+eroOWkp+e6suOAggp2ZXJzaW9uOiAiMS4wIgotLS0KCiMg56yU6K6w6L2s5aSn57qyIMK3IOWFrOW8gOa8lOekuiBTa2lsbAoK6L+Z5piv54us56uL5Yib5L2c55qE5YWs5byA5ryU56S66LWE5paZ77yM5LiN5YyF5ZCr5a6e6ZmF55Sf5LqnIFNraWxs44CC5bel5L2c5Y+w5Y+q6K+75Y+W5a6D77yb5a6e6ZmF5omn6KGM6ZyA5L2/55So6ICF5Y+m6KGM5Lqk57uZ6Ieq5bex55qE5bel5YW344CCCgojIyDmjqXmlLbnrJTorrAKCuS/neeVmeeUqOaIt+WOn+Wni+eslOiusOWPiuauteiQvee8luWPt+OAguS/oeaBr+e8uuWkseaXtuWIl+WHuue8uuWPo++8jOS4jee8lumAoOW8leeUqOaIluS6i+WunuOAguingSBb5pS26ZuG5qih5Z2XXShtb2R1bGVzL2NvbGxlY3QvU0tJTEwubWQp44CCCgojIyDnu4Tnu4flpKfnurIKCuWFiOehruiupOS4u+mimOWSjOivu+iAhe+8jOWGjeaMieS4u+W8oOOAgeS+neaNruOAgeS+i+WtkOe7hOe7h+eroOiKguOAguingSBb5aSn57qy5qih5Z2XXShtb2R1bGVzL291dGxpbmUvU0tJTEwubWQp44CCCgojIyDoh6rmo4DkuI7kuqTku5gKCuavj+S4qumHjeimgee7k+iuuuWbnuaMh+WOn+eslOiusOauteiQve+8m+acque7j+ivgeWunueahOWGheWuueagh+S4uuW+heaguOWunuOAgui+k+WHuuWkp+e6suS7peWPiuW+heihpeWFhea4heWNleOAggo=",
+      "text": "---\nname: notes-to-outline\ndescription: 把用户提供的笔记整理成有来源的文章大纲。\nversion: \"1.0\"\n---\n\n# 笔记转大纲 · 公开演示 Skill\n\n这是独立创作的公开演示资料，不包含实际生产 Skill。工作台只读取它；实际执行需使用者另行交给自己的工具。\n\n## 接收笔记\n\n保留用户原始笔记及段落编号。信息缺失时列出缺口，不编造引用或事实。见 [收集模块](modules/collect/SKILL.md)。\n\n## 组织大纲\n\n先确认主题和读者，再按主张、依据、例子组织章节。见 [大纲模块](modules/outline/SKILL.md)。\n\n## 自检与交付\n\n每个重要结论回指原笔记段落；未经证实的内容标为待核实。输出大纲以及待补充清单。\n",
+      "line_count": 22
+    },
+    {
+      "id": "notes-to-outline/modules/collect/SKILL.md",
+      "source_skill_id": "notes-to-outline",
+      "path": "notes-to-outline/modules/collect/SKILL.md",
+      "sha256": "dbf18a30ed0f05c82bfa57ab95d455ff649e1d4537eda84d9db8db89b25899a5",
+      "bytes": 354,
+      "encoding": "utf-8",
+      "original_base64": "IyDmlLbpm4bkuI7lrprkvY0KCiMjIOi+k+WFpQoK5o6l5pS25L2/55So6ICF5pyJ5p2D5L2/55So55qE56yU6K6w77yM5LiN6K6/6Zeu5pyq57uP5oyH5piO55qE56eB5pyJ6LWE5paZ44CCCgojIyDlpITnkIYKCuS/neeVmeeslOiusOWujOaVtOato+aWh++8jOS4uuavj+auteiuvue9ruWPr+WumuS9jee8luWPt+OAguebuOWQjOS/oeaBr+WPr+S7peW9kuW5tue0ouW8le+8jOS4jeiDveWIoOaOieWOn+Wni+S+neaNruOAggoKIyMg6L6T5Ye6CgrkuqTku5jigJzmrrXokL3nvJblj7fjgIHljp/mlofjgIHkuLvpopjlgJnpgInjgIHnvLrlj6PigJ3ooajjgILmsqHmnInljp/mlofml7blgZzmraLlhoXlrrnlvZLnurPjgIIK",
+      "text": "# 收集与定位\n\n## 输入\n\n接收使用者有权使用的笔记，不访问未经指明的私有资料。\n\n## 处理\n\n保留笔记完整正文，为每段设置可定位编号。相同信息可以归并索引，不能删掉原始依据。\n\n## 输出\n\n交付“段落编号、原文、主题候选、缺口”表。没有原文时停止内容归纳。\n",
+      "line_count": 14
+    },
+    {
+      "id": "notes-to-outline/modules/outline/SKILL.md",
+      "source_skill_id": "notes-to-outline",
+      "path": "notes-to-outline/modules/outline/SKILL.md",
+      "sha256": "f0af2ae8240f4c467cba020f4364c63d045812415d3632acaa3301f2ec904701",
+      "bytes": 454,
+      "encoding": "utf-8",
+      "original_base64": "IyDlpKfnurLorr7orqEKCiMjIOS4u+W8oOS4juS+neaNrgoK5L6d5o2u5pS26ZuG5qih5Z2X55qE5q616JC957Si5byV5o6S5YiX5Li76aKY44CC5q+P6IqC5YaZ5riF5Li75byg44CB5L6d5o2u5q616JC95ZKM5b6F5qC45a6e6aG544CCCgojIyDnq6DoioLpobrluo8KCuWFiOino+mHiumXrumimO+8jOWGjeaPkOS+m+ivgeaNru+8jOacgOWQjuWuieaOkuWPr+aTjeS9nOeahOe7k+WwvuOAgui/meS4qumhuuW6j+WPquaYr+acrOa8lOekuiBTa2lsbCDnmoTlhpnkvZzop4TliJnvvIzkuI3og73lpZfnu5nlhbbku5bmnaXmupDjgIIKCiMjIOi+k+WHuuajgOafpQoK5aSn57qy5b+F6aG75L+d55WZ5Li76aKY44CB6K+76ICF44CB56ug6IqC5qCH6aKY44CB6K6654K544CB5q616JC957yW5Y+35Y+K5b6F6KGl5YWF6aG544CC5LiN6KaB5oqK57y65aSx5L+h5oGv5YaZ5oiQ56Gu5a6a57uT6K6644CCCg==",
+      "text": "# 大纲设计\n\n## 主张与依据\n\n依据收集模块的段落索引排列主题。每节写清主张、依据段落和待核实项。\n\n## 章节顺序\n\n先解释问题，再提供证据，最后安排可操作的结尾。这个顺序只是本演示 Skill 的写作规则，不能套给其他来源。\n\n## 输出检查\n\n大纲必须保留主题、读者、章节标题、论点、段落编号及待补充项。不要把缺失信息写成确定结论。\n",
+      "line_count": 14
+    },
+    {
+      "id": "evidence-review/SKILL.md",
+      "source_skill_id": "evidence-review",
+      "path": "evidence-review/SKILL.md",
+      "sha256": "8df30a5c0369aa4f20dbf60ba374090557076ea24e452ffb16682d62a5b45403",
+      "bytes": 489,
+      "encoding": "utf-8",
+      "original_base64": "LS0tCm5hbWU6IGV2aWRlbmNlLXJldmlldwpkZXNjcmlwdGlvbjog5Li65pyJ5p2l5rqQ55qE5YaZ5L2c6I2J56i/5qC45a+56K+B5o2u6IyD5Zu044CCCnZlcnNpb246ICIxLjAiCi0tLQoKIyDor4Hmja7lpI3moLggwrcg5YWs5byA5ryU56S6IFNraWxsCgrov5nkuKrni6znq4vnvJblhpnnmoTkvovlrZDnlKjkuo7mvJTnpLrot6ggU2tpbGwg5qih5Z2X57uE5ZCI44CCCgojIyDlpI3moLjop4TliJkKCuivt+mYheivuyBb6K+B5o2u5qOA5p+l5qih5Z2XXShtb2R1bGVzL2V2aWRlbmNlL1NLSUxMLm1kKeOAguaguOWvueiNieeov+WSjOS9v+eUqOiAheaPkOS+m+eahOadkOaWme+8jOS4jeiuv+mXruWklumDqOi0puWPt++8jOS4jeiHquWKqOS/ruaUueWOn+aWh+OAggoKIyMg5Lqk5LuYCgrliJflh7rlt7LmlK/mjIHjgIHor4Hmja7kuI3otrPlj4rkupLnm7jlhrLnqoHnmoTnu5PorrrjgILnu5nlh7rljp/mlofkvY3nva7vvIzkv53nlZnmnKrlhrPpobnjgIIK",
+      "text": "---\nname: evidence-review\ndescription: 为有来源的写作草稿核对证据范围。\nversion: \"1.0\"\n---\n\n# 证据复核 · 公开演示 Skill\n\n这个独立编写的例子用于演示跨 Skill 模块组合。\n\n## 复核规则\n\n请阅读 [证据检查模块](modules/evidence/SKILL.md)。核对草稿和使用者提供的材料，不访问外部账号，不自动修改原文。\n\n## 交付\n\n列出已支持、证据不足及互相冲突的结论。给出原文位置，保留未决项。\n",
+      "line_count": 18
+    },
+    {
+      "id": "evidence-review/modules/evidence/SKILL.md",
+      "source_skill_id": "evidence-review",
+      "path": "evidence-review/modules/evidence/SKILL.md",
+      "sha256": "700fe5af466518911be126fecd5438f5277a979c08f4e3536a548b2eca2b282d",
+      "bytes": 396,
+      "encoding": "utf-8",
+      "original_base64": "IyDor4Hmja7mo4Dmn6UKCiMjIOajgOafpei+k+WFpQoK5b+F6aG75ZCM5pe25pyJ6I2J56i/5ZKM5Y6f5aeL5p2Q5paZ44CC5Y+q5pyJ5pGY6KaB5pe277yM5LiN6IO95a6j56ew5qC45a+55LqG5a6M5pW05Y6f5paH44CCCgojIyDlrprkvY3or4Hmja4KCuavj+adoee7k+iuuuWIl+WHuuWOn+aWh+auteiQveOAgeaUr+aMgeiMg+WbtOOAgeefm+ebvuS4jue8uuWksemhueOAguivgeaNruS4jeaUr+aMgeaXtuagh+S4uuW+heaguOWunuOAggoKIyMg6L6T5Ye65aSN5qC46KGoCgrovpPlh7rigJznu5PorrrjgIHljp/mlofkvY3nva7jgIHliKTmlq3jgIHljp/lm6DjgIHkuIvkuIDmraXigJ3ooajjgILlpI3moLjooajkuI3mjojkuojku7vkvZXnlJ/kuqfmiafooYzmiJblj5HluIPmnYPpmZDjgIIK",
+      "text": "# 证据检查\n\n## 检查输入\n\n必须同时有草稿和原始材料。只有摘要时，不能宣称核对了完整原文。\n\n## 定位证据\n\n每条结论列出原文段落、支持范围、矛盾与缺失项。证据不支持时标为待核实。\n\n## 输出复核表\n\n输出“结论、原文位置、判断、原因、下一步”表。复核表不授予任何生产执行或发布权限。\n",
+      "line_count": 14
+    }
+  ],
+  "units": [
+    {
+      "id": "n-6c131e19b568374d8e7d5197",
+      "title": "笔记转大纲 · 公开演示 Skill",
+      "kind": "file",
+      "parent_id": null,
+      "path": "notes-to-outline/SKILL.md",
+      "count": 5,
+      "source_skill_id": "notes-to-outline",
+      "source_name": "笔记转大纲",
+      "source_version": "1.0",
+      "source_snapshot": "87d327087fa3a33d0f9d3608f00cd746e1e3e4cba6e3ab4d39ab12ec48f42965",
+      "source_groups": [],
+      "reuse_status": "candidate_requires_review",
+      "source_content": [
+        {
+          "file_id": "notes-to-outline/SKILL.md",
+          "path": "notes-to-outline/SKILL.md",
+          "title": "笔记转大纲 · 公开演示 Skill",
+          "sha256": "53e0de91333362530bed24efb797873a79607bd03815fd25f6fa7650d87862b6",
+          "ranges": [
+            {
+              "start_line": 1,
+              "end_line": 22
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n-778c58de02f9f7935d9fe6bb",
+      "title": "接收笔记",
+      "kind": "section",
+      "parent_id": "n-6c131e19b568374d8e7d5197",
+      "path": "notes-to-outline/SKILL.md",
+      "count": 0,
+      "source_skill_id": "notes-to-outline",
+      "source_name": "笔记转大纲",
+      "source_version": "1.0",
+      "source_snapshot": "87d327087fa3a33d0f9d3608f00cd746e1e3e4cba6e3ab4d39ab12ec48f42965",
+      "source_groups": [],
+      "reuse_status": "candidate_requires_review",
+      "source_content": [
+        {
+          "file_id": "notes-to-outline/SKILL.md",
+          "path": "notes-to-outline/SKILL.md",
+          "title": "接收笔记",
+          "sha256": "53e0de91333362530bed24efb797873a79607bd03815fd25f6fa7650d87862b6",
+          "ranges": [
+            {
+              "start_line": 11,
+              "end_line": 14
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n-7def942a73ddab3694af5bbb",
+      "title": "组织大纲",
+      "kind": "section",
+      "parent_id": "n-6c131e19b568374d8e7d5197",
+      "path": "notes-to-outline/SKILL.md",
+      "count": 0,
+      "source_skill_id": "notes-to-outline",
+      "source_name": "笔记转大纲",
+      "source_version": "1.0",
+      "source_snapshot": "87d327087fa3a33d0f9d3608f00cd746e1e3e4cba6e3ab4d39ab12ec48f42965",
+      "source_groups": [],
+      "reuse_status": "candidate_requires_review",
+      "source_content": [
+        {
+          "file_id": "notes-to-outline/SKILL.md",
+          "path": "notes-to-outline/SKILL.md",
+          "title": "组织大纲",
+          "sha256": "53e0de91333362530bed24efb797873a79607bd03815fd25f6fa7650d87862b6",
+          "ranges": [
+            {
+              "start_line": 15,
+              "end_line": 18
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n-19166f99ef56c2247b57ebaa",
+      "title": "自检与交付",
+      "kind": "section",
+      "parent_id": "n-6c131e19b568374d8e7d5197",
+      "path": "notes-to-outline/SKILL.md",
+      "count": 0,
+      "source_skill_id": "notes-to-outline",
+      "source_name": "笔记转大纲",
+      "source_version": "1.0",
+      "source_snapshot": "87d327087fa3a33d0f9d3608f00cd746e1e3e4cba6e3ab4d39ab12ec48f42965",
+      "source_groups": [],
+      "reuse_status": "candidate_requires_review",
+      "source_content": [
+        {
+          "file_id": "notes-to-outline/SKILL.md",
+          "path": "notes-to-outline/SKILL.md",
+          "title": "自检与交付",
+          "sha256": "53e0de91333362530bed24efb797873a79607bd03815fd25f6fa7650d87862b6",
+          "ranges": [
+            {
+              "start_line": 19,
+              "end_line": 22
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n-a3bceb4de5a391bc838e891d",
+      "title": "收集与定位",
+      "kind": "file",
+      "parent_id": "n-6c131e19b568374d8e7d5197",
+      "path": "notes-to-outline/modules/collect/SKILL.md",
+      "count": 3,
+      "source_skill_id": "notes-to-outline",
+      "source_name": "笔记转大纲",
+      "source_version": "1.0",
+      "source_snapshot": "87d327087fa3a33d0f9d3608f00cd746e1e3e4cba6e3ab4d39ab12ec48f42965",
+      "source_groups": [],
+      "reuse_status": "candidate_requires_review",
+      "source_content": [
+        {
+          "file_id": "notes-to-outline/modules/collect/SKILL.md",
+          "path": "notes-to-outline/modules/collect/SKILL.md",
+          "title": "收集与定位",
+          "sha256": "dbf18a30ed0f05c82bfa57ab95d455ff649e1d4537eda84d9db8db89b25899a5",
+          "ranges": [
+            {
+              "start_line": 1,
+              "end_line": 14
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n-bf7f02d8f2c86c19a438726a",
+      "title": "输入",
+      "kind": "section",
+      "parent_id": "n-a3bceb4de5a391bc838e891d",
+      "path": "notes-to-outline/modules/collect/SKILL.md",
+      "count": 0,
+      "source_skill_id": "notes-to-outline",
+      "source_name": "笔记转大纲",
+      "source_version": "1.0",
+      "source_snapshot": "87d327087fa3a33d0f9d3608f00cd746e1e3e4cba6e3ab4d39ab12ec48f42965",
+      "source_groups": [],
+      "reuse_status": "candidate_requires_review",
+      "source_content": [
+        {
+          "file_id": "notes-to-outline/modules/collect/SKILL.md",
+          "path": "notes-to-outline/modules/collect/SKILL.md",
+          "title": "输入",
+          "sha256": "dbf18a30ed0f05c82bfa57ab95d455ff649e1d4537eda84d9db8db89b25899a5",
+          "ranges": [
+            {
+              "start_line": 3,
+              "end_line": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n-bd2b49da79dfbb56f97ba91a",
+      "title": "处理",
+      "kind": "section",
+      "parent_id": "n-a3bceb4de5a391bc838e891d",
+      "path": "notes-to-outline/modules/collect/SKILL.md",
+      "count": 0,
+      "source_skill_id": "notes-to-outline",
+      "source_name": "笔记转大纲",
+      "source_version": "1.0",
+      "source_snapshot": "87d327087fa3a33d0f9d3608f00cd746e1e3e4cba6e3ab4d39ab12ec48f42965",
+      "source_groups": [],
+      "reuse_status": "candidate_requires_review",
+      "source_content": [
+        {
+          "file_id": "notes-to-outline/modules/collect/SKILL.md",
+          "path": "notes-to-outline/modules/collect/SKILL.md",
+          "title": "处理",
+          "sha256": "dbf18a30ed0f05c82bfa57ab95d455ff649e1d4537eda84d9db8db89b25899a5",
+          "ranges": [
+            {
+              "start_line": 7,
+              "end_line": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n-5e3af26b86b796a99573a3e4",
+      "title": "输出",
+      "kind": "section",
+      "parent_id": "n-a3bceb4de5a391bc838e891d",
+      "path": "notes-to-outline/modules/collect/SKILL.md",
+      "count": 0,
+      "source_skill_id": "notes-to-outline",
+      "source_name": "笔记转大纲",
+      "source_version": "1.0",
+      "source_snapshot": "87d327087fa3a33d0f9d3608f00cd746e1e3e4cba6e3ab4d39ab12ec48f42965",
+      "source_groups": [],
+      "reuse_status": "candidate_requires_review",
+      "source_content": [
+        {
+          "file_id": "notes-to-outline/modules/collect/SKILL.md",
+          "path": "notes-to-outline/modules/collect/SKILL.md",
+          "title": "输出",
+          "sha256": "dbf18a30ed0f05c82bfa57ab95d455ff649e1d4537eda84d9db8db89b25899a5",
+          "ranges": [
+            {
+              "start_line": 11,
+              "end_line": 14
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n-1ef98cc7b424e363a50fe4d0",
+      "title": "大纲设计",
+      "kind": "file",
+      "parent_id": "n-6c131e19b568374d8e7d5197",
+      "path": "notes-to-outline/modules/outline/SKILL.md",
+      "count": 3,
+      "source_skill_id": "notes-to-outline",
+      "source_name": "笔记转大纲",
+      "source_version": "1.0",
+      "source_snapshot": "87d327087fa3a33d0f9d3608f00cd746e1e3e4cba6e3ab4d39ab12ec48f42965",
+      "source_groups": [],
+      "reuse_status": "candidate_requires_review",
+      "source_content": [
+        {
+          "file_id": "notes-to-outline/modules/outline/SKILL.md",
+          "path": "notes-to-outline/modules/outline/SKILL.md",
+          "title": "大纲设计",
+          "sha256": "f0af2ae8240f4c467cba020f4364c63d045812415d3632acaa3301f2ec904701",
+          "ranges": [
+            {
+              "start_line": 1,
+              "end_line": 14
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n-a9c0145111f1e63489b738bd",
+      "title": "主张与依据",
+      "kind": "section",
+      "parent_id": "n-1ef98cc7b424e363a50fe4d0",
+      "path": "notes-to-outline/modules/outline/SKILL.md",
+      "count": 0,
+      "source_skill_id": "notes-to-outline",
+      "source_name": "笔记转大纲",
+      "source_version": "1.0",
+      "source_snapshot": "87d327087fa3a33d0f9d3608f00cd746e1e3e4cba6e3ab4d39ab12ec48f42965",
+      "source_groups": [],
+      "reuse_status": "candidate_requires_review",
+      "source_content": [
+        {
+          "file_id": "notes-to-outline/modules/outline/SKILL.md",
+          "path": "notes-to-outline/modules/outline/SKILL.md",
+          "title": "主张与依据",
+          "sha256": "f0af2ae8240f4c467cba020f4364c63d045812415d3632acaa3301f2ec904701",
+          "ranges": [
+            {
+              "start_line": 3,
+              "end_line": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n-e61e5a9b032ef35e8cc60653",
+      "title": "章节顺序",
+      "kind": "section",
+      "parent_id": "n-1ef98cc7b424e363a50fe4d0",
+      "path": "notes-to-outline/modules/outline/SKILL.md",
+      "count": 0,
+      "source_skill_id": "notes-to-outline",
+      "source_name": "笔记转大纲",
+      "source_version": "1.0",
+      "source_snapshot": "87d327087fa3a33d0f9d3608f00cd746e1e3e4cba6e3ab4d39ab12ec48f42965",
+      "source_groups": [],
+      "reuse_status": "candidate_requires_review",
+      "source_content": [
+        {
+          "file_id": "notes-to-outline/modules/outline/SKILL.md",
+          "path": "notes-to-outline/modules/outline/SKILL.md",
+          "title": "章节顺序",
+          "sha256": "f0af2ae8240f4c467cba020f4364c63d045812415d3632acaa3301f2ec904701",
+          "ranges": [
+            {
+              "start_line": 7,
+              "end_line": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n-1ab0d26035541a53c8ade4a5",
+      "title": "输出检查",
+      "kind": "section",
+      "parent_id": "n-1ef98cc7b424e363a50fe4d0",
+      "path": "notes-to-outline/modules/outline/SKILL.md",
+      "count": 0,
+      "source_skill_id": "notes-to-outline",
+      "source_name": "笔记转大纲",
+      "source_version": "1.0",
+      "source_snapshot": "87d327087fa3a33d0f9d3608f00cd746e1e3e4cba6e3ab4d39ab12ec48f42965",
+      "source_groups": [],
+      "reuse_status": "candidate_requires_review",
+      "source_content": [
+        {
+          "file_id": "notes-to-outline/modules/outline/SKILL.md",
+          "path": "notes-to-outline/modules/outline/SKILL.md",
+          "title": "输出检查",
+          "sha256": "f0af2ae8240f4c467cba020f4364c63d045812415d3632acaa3301f2ec904701",
+          "ranges": [
+            {
+              "start_line": 11,
+              "end_line": 14
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n-925c3e0595bfab4f974608a5",
+      "title": "证据复核 · 公开演示 Skill",
+      "kind": "file",
+      "parent_id": null,
+      "path": "evidence-review/SKILL.md",
+      "count": 3,
+      "source_skill_id": "evidence-review",
+      "source_name": "证据复核",
+      "source_version": "1.0",
+      "source_snapshot": "66dc34e3c7714d6d5db2b7864434f8043e9ff4c9d66a2d243210fb204676a445",
+      "source_groups": [],
+      "reuse_status": "candidate_requires_review",
+      "source_content": [
+        {
+          "file_id": "evidence-review/SKILL.md",
+          "path": "evidence-review/SKILL.md",
+          "title": "证据复核 · 公开演示 Skill",
+          "sha256": "8df30a5c0369aa4f20dbf60ba374090557076ea24e452ffb16682d62a5b45403",
+          "ranges": [
+            {
+              "start_line": 1,
+              "end_line": 18
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n-e4f9ee831a610c84b6c418f7",
+      "title": "复核规则",
+      "kind": "section",
+      "parent_id": "n-925c3e0595bfab4f974608a5",
+      "path": "evidence-review/SKILL.md",
+      "count": 0,
+      "source_skill_id": "evidence-review",
+      "source_name": "证据复核",
+      "source_version": "1.0",
+      "source_snapshot": "66dc34e3c7714d6d5db2b7864434f8043e9ff4c9d66a2d243210fb204676a445",
+      "source_groups": [],
+      "reuse_status": "candidate_requires_review",
+      "source_content": [
+        {
+          "file_id": "evidence-review/SKILL.md",
+          "path": "evidence-review/SKILL.md",
+          "title": "复核规则",
+          "sha256": "8df30a5c0369aa4f20dbf60ba374090557076ea24e452ffb16682d62a5b45403",
+          "ranges": [
+            {
+              "start_line": 11,
+              "end_line": 14
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n-d7f01e3da3e76151ebe194ab",
+      "title": "交付",
+      "kind": "section",
+      "parent_id": "n-925c3e0595bfab4f974608a5",
+      "path": "evidence-review/SKILL.md",
+      "count": 0,
+      "source_skill_id": "evidence-review",
+      "source_name": "证据复核",
+      "source_version": "1.0",
+      "source_snapshot": "66dc34e3c7714d6d5db2b7864434f8043e9ff4c9d66a2d243210fb204676a445",
+      "source_groups": [],
+      "reuse_status": "candidate_requires_review",
+      "source_content": [
+        {
+          "file_id": "evidence-review/SKILL.md",
+          "path": "evidence-review/SKILL.md",
+          "title": "交付",
+          "sha256": "8df30a5c0369aa4f20dbf60ba374090557076ea24e452ffb16682d62a5b45403",
+          "ranges": [
+            {
+              "start_line": 15,
+              "end_line": 18
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n-afebe1abc351178d220b9ddc",
+      "title": "证据检查",
+      "kind": "file",
+      "parent_id": "n-925c3e0595bfab4f974608a5",
+      "path": "evidence-review/modules/evidence/SKILL.md",
+      "count": 3,
+      "source_skill_id": "evidence-review",
+      "source_name": "证据复核",
+      "source_version": "1.0",
+      "source_snapshot": "66dc34e3c7714d6d5db2b7864434f8043e9ff4c9d66a2d243210fb204676a445",
+      "source_groups": [],
+      "reuse_status": "candidate_requires_review",
+      "source_content": [
+        {
+          "file_id": "evidence-review/modules/evidence/SKILL.md",
+          "path": "evidence-review/modules/evidence/SKILL.md",
+          "title": "证据检查",
+          "sha256": "700fe5af466518911be126fecd5438f5277a979c08f4e3536a548b2eca2b282d",
+          "ranges": [
+            {
+              "start_line": 1,
+              "end_line": 14
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n-ca96d28611b56cddd3f8c172",
+      "title": "检查输入",
+      "kind": "section",
+      "parent_id": "n-afebe1abc351178d220b9ddc",
+      "path": "evidence-review/modules/evidence/SKILL.md",
+      "count": 0,
+      "source_skill_id": "evidence-review",
+      "source_name": "证据复核",
+      "source_version": "1.0",
+      "source_snapshot": "66dc34e3c7714d6d5db2b7864434f8043e9ff4c9d66a2d243210fb204676a445",
+      "source_groups": [],
+      "reuse_status": "candidate_requires_review",
+      "source_content": [
+        {
+          "file_id": "evidence-review/modules/evidence/SKILL.md",
+          "path": "evidence-review/modules/evidence/SKILL.md",
+          "title": "检查输入",
+          "sha256": "700fe5af466518911be126fecd5438f5277a979c08f4e3536a548b2eca2b282d",
+          "ranges": [
+            {
+              "start_line": 3,
+              "end_line": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n-63bd07154b48777e4d9a1a6d",
+      "title": "定位证据",
+      "kind": "section",
+      "parent_id": "n-afebe1abc351178d220b9ddc",
+      "path": "evidence-review/modules/evidence/SKILL.md",
+      "count": 0,
+      "source_skill_id": "evidence-review",
+      "source_name": "证据复核",
+      "source_version": "1.0",
+      "source_snapshot": "66dc34e3c7714d6d5db2b7864434f8043e9ff4c9d66a2d243210fb204676a445",
+      "source_groups": [],
+      "reuse_status": "candidate_requires_review",
+      "source_content": [
+        {
+          "file_id": "evidence-review/modules/evidence/SKILL.md",
+          "path": "evidence-review/modules/evidence/SKILL.md",
+          "title": "定位证据",
+          "sha256": "700fe5af466518911be126fecd5438f5277a979c08f4e3536a548b2eca2b282d",
+          "ranges": [
+            {
+              "start_line": 7,
+              "end_line": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n-18716b27c0b4e14226181078",
+      "title": "输出复核表",
+      "kind": "section",
+      "parent_id": "n-afebe1abc351178d220b9ddc",
+      "path": "evidence-review/modules/evidence/SKILL.md",
+      "count": 0,
+      "source_skill_id": "evidence-review",
+      "source_name": "证据复核",
+      "source_version": "1.0",
+      "source_snapshot": "66dc34e3c7714d6d5db2b7864434f8043e9ff4c9d66a2d243210fb204676a445",
+      "source_groups": [],
+      "reuse_status": "candidate_requires_review",
+      "source_content": [
+        {
+          "file_id": "evidence-review/modules/evidence/SKILL.md",
+          "path": "evidence-review/modules/evidence/SKILL.md",
+          "title": "输出复核表",
+          "sha256": "700fe5af466518911be126fecd5438f5277a979c08f4e3536a548b2eca2b282d",
+          "ranges": [
+            {
+              "start_line": 11,
+              "end_line": 14
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "contains": [
+    {
+      "source": "n-6c131e19b568374d8e7d5197",
+      "target": "n-778c58de02f9f7935d9fe6bb"
+    },
+    {
+      "source": "n-6c131e19b568374d8e7d5197",
+      "target": "n-7def942a73ddab3694af5bbb"
+    },
+    {
+      "source": "n-6c131e19b568374d8e7d5197",
+      "target": "n-19166f99ef56c2247b57ebaa"
+    },
+    {
+      "source": "n-6c131e19b568374d8e7d5197",
+      "target": "n-a3bceb4de5a391bc838e891d"
+    },
+    {
+      "source": "n-a3bceb4de5a391bc838e891d",
+      "target": "n-bf7f02d8f2c86c19a438726a"
+    },
+    {
+      "source": "n-a3bceb4de5a391bc838e891d",
+      "target": "n-bd2b49da79dfbb56f97ba91a"
+    },
+    {
+      "source": "n-a3bceb4de5a391bc838e891d",
+      "target": "n-5e3af26b86b796a99573a3e4"
+    },
+    {
+      "source": "n-6c131e19b568374d8e7d5197",
+      "target": "n-1ef98cc7b424e363a50fe4d0"
+    },
+    {
+      "source": "n-1ef98cc7b424e363a50fe4d0",
+      "target": "n-a9c0145111f1e63489b738bd"
+    },
+    {
+      "source": "n-1ef98cc7b424e363a50fe4d0",
+      "target": "n-e61e5a9b032ef35e8cc60653"
+    },
+    {
+      "source": "n-1ef98cc7b424e363a50fe4d0",
+      "target": "n-1ab0d26035541a53c8ade4a5"
+    },
+    {
+      "source": "n-925c3e0595bfab4f974608a5",
+      "target": "n-e4f9ee831a610c84b6c418f7"
+    },
+    {
+      "source": "n-925c3e0595bfab4f974608a5",
+      "target": "n-d7f01e3da3e76151ebe194ab"
+    },
+    {
+      "source": "n-925c3e0595bfab4f974608a5",
+      "target": "n-afebe1abc351178d220b9ddc"
+    },
+    {
+      "source": "n-afebe1abc351178d220b9ddc",
+      "target": "n-ca96d28611b56cddd3f8c172"
+    },
+    {
+      "source": "n-afebe1abc351178d220b9ddc",
+      "target": "n-63bd07154b48777e4d9a1a6d"
+    },
+    {
+      "source": "n-afebe1abc351178d220b9ddc",
+      "target": "n-18716b27c0b4e14226181078"
+    }
+  ],
+  "sources": [
+    {
+      "id": "notes-to-outline",
+      "name": "笔记转大纲",
+      "version": "1.0",
+      "snapshot_sha256": "87d327087fa3a33d0f9d3608f00cd746e1e3e4cba6e3ab4d39ab12ec48f42965",
+      "root": "examples/notes-to-outline"
+    },
+    {
+      "id": "evidence-review",
+      "name": "证据复核",
+      "version": "1.0",
+      "snapshot_sha256": "66dc34e3c7714d6d5db2b7864434f8043e9ff4c9d66a2d243210fb204676a445",
+      "root": "examples/evidence-review"
+    }
+  ]
+}

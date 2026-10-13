@@ -4,13 +4,17 @@
 
 See how existing AI Skills are built, design new ones on a visual canvas, and combine modules from different sources. Export the complete design to your agent or developer for integration.
 
-[**Download Windows installer**](https://github.com/jiangzl1986-gif/skill-workbench/releases/download/v0.1.0-beta.2/skill-workbench-0.1.0-beta.2-windows-x64-setup.exe) · [**Try the demo**](docs/TRY_IT.md#english) · [**Discussions**](https://github.com/jiangzl1986-gif/skill-workbench/discussions)
+[**Try in your browser — no install →**](https://jiangzl1986-gif.github.io/skill-workbench/?lang=en) · [**Download Windows installer**](https://github.com/jiangzl1986-gif/skill-workbench/releases/download/v0.1.0-beta.2/skill-workbench-0.1.0-beta.2-windows-x64-setup.exe) · [**Discussions**](https://github.com/jiangzl1986-gif/skill-workbench/discussions)
 
 [中文 / Bilingual overview](README.md) · [All downloads](https://github.com/jiangzl1986-gif/skill-workbench/releases) · [User guide (Chinese)](docs/USER_GUIDE.md)
 
-![Skill Workbench: a visual canvas for AI Skill creation. Composition concept.](docs/images/social-preview.jpg)
+[![Actual UI walkthrough: open a parent module, add evidence checking from another Skill, connect, cut, inspect source and export.](docs/images/live-walkthrough.gif)](https://jiangzl1986-gif.github.io/skill-workbench/?lang=en)
 
-**Try one small change: add evidence checking inside a notes-to-outline Skill.** Both public examples ship with the installer. Follow the [bilingual walkthrough](docs/TRY_IT.md#english) to import, inspect, compose, connect and export a design.
+**Try a real edit before installing anything.** [Open the interactive canvas](https://jiangzl1986-gif.github.io/skill-workbench/?lang=en), go inside “Outline design”, bring in “Evidence check” from another Skill, connect or cut links, and export the design with its complete source files. The animation is a step-by-step replay of actual browser screenshots.
+
+Chinese / English interface · No account · Two public example Skills · Drafts stay in your browser. The example export is for agent review, not desktop import. To import your own Skills, get the full desktop app.
+
+[Browser example guide](docs/ONLINE_DEMO.md#english) · [Desktop walkthrough](docs/TRY_IT.md#english)
 
 Windows x64 · Chinese UI · MIT · Local-first · **No separate Python / Node.js installation**
 

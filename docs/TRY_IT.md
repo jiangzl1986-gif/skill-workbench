@@ -1,5 +1,9 @@
 # 跟着公开示例，完成第一次 Skill 组装
 
+**想先试、不想安装？[直接打开在线画布](https://jiangzl1986-gif.github.io/skill-workbench/)。** 支持中英文，可操作内部组装、连线、剪线和导出。[在线示例说明](ONLINE_DEMO.md)。以下步骤介绍桌面完整版。
+
+**Try before installing: [open the browser example](https://jiangzl1986-gif.github.io/skill-workbench/?lang=en).** Compose nested modules, connect, cut and export. [Browser guide](ONLINE_DEMO.md#english). The steps below cover the full desktop app.
+
 [English walkthrough](#english) · [回到项目首页](../README.md) · [下载 Windows 安装包](https://github.com/jiangzl1986-gif/skill-workbench/releases/download/v0.1.0-beta.2/skill-workbench-0.1.0-beta.2-windows-x64-setup.exe)
 
 这次体验的目标：**给“笔记转大纲”设计一个来自另一份 Skill 的“证据检查”模块。** 看清它来自哪里、加入哪一层、希望怎样交接，再导出设计交给自己的 Agent。示例为本项目编写并采用 MIT，不包含私人 Skill。

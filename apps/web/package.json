@@ -4,7 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "tsc -b && vite build"
+    "build": "tsc -b && vite build",
+    "build:demo": "node ../../tools/build_demo_sources.mjs && tsc -b && vite build --config vite.demo.config.ts",
+    "dev:demo": "vite --config vite.demo.config.ts --host 127.0.0.1"
   },
   "dependencies": {
     "react": "^19.0.0",

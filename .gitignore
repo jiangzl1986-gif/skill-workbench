@@ -18,6 +18,7 @@ node_modules/
 .build-history/
 .dist-staging-*/
 dist/
+dist-demo/
 config/*.json
 !config/*.example.json
 *.log

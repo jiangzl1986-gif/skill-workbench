@@ -8,15 +8,19 @@ Skill Workbench 把 Skill 的结构、规则和模块带到可缩放、可平移
 
 See how existing AI Skills are built, design new ones on a visual canvas, and combine modules from different sources. Export the complete design to your agent or developer for integration.
 
-[**下载 Windows 安装包 / Windows installer**](https://github.com/jiangzl1986-gif/skill-workbench/releases/download/v0.1.0-beta.2/skill-workbench-0.1.0-beta.2-windows-x64-setup.exe) · [**图文演示 / Try the demo**](docs/TRY_IT.md) · [**交流与案例 / Discussions**](https://github.com/jiangzl1986-gif/skill-workbench/discussions)
+[**直接在线体验 / Try in your browser →**](https://jiangzl1986-gif.github.io/skill-workbench/) · [**下载 Windows 安装包 / Windows installer**](https://github.com/jiangzl1986-gif/skill-workbench/releases/download/v0.1.0-beta.2/skill-workbench-0.1.0-beta.2-windows-x64-setup.exe) · [**交流与案例 / Discussions**](https://github.com/jiangzl1986-gif/skill-workbench/discussions)
 
 [中文介绍](#中文介绍) · [English on this page](#english) · [English README](README.en.md) · [全部下载 / All downloads](https://github.com/jiangzl1986-gif/skill-workbench/releases) · [使用指南 / User guide](docs/USER_GUIDE.md)
 
-![Skill Workbench：让 Skill 可视化，让创作看得见 / A visual canvas for AI Skill creation. 模块组合示意 / Composition concept.](docs/images/social-preview.jpg)
+[![真实操作步骤回放：进入内部、加入模块、连线、剪线、查看原文、导出 / Actual UI walkthrough: nested composition, cross-source modules, connect, cut, inspect and export.](docs/images/live-walkthrough.gif)](https://jiangzl1986-gif.github.io/skill-workbench/)
 
-**先体验一个小改动：把“证据检查”加入“笔记转大纲”的内部模块。** 两个公开示例已经随安装包提供，下载后就能跟着 [图文演示](docs/TRY_IT.md) 完成导入、查看、内部组装、连线和设计导出。
+**不用下载安装，先亲手改一个 Skill 设计。** [打开在线画布](https://jiangzl1986-gif.github.io/skill-workbench/)，进入「大纲设计」内部，把另一套 Skill 的「证据检查」加进去，连线、剪线，再导出包含完整原文的设计。上方动图是实际操作截图的步骤回放。
 
-**Try one small change: add evidence checking inside a notes-to-outline Skill.** Both public examples ship with the installer. Follow the [bilingual walkthrough](docs/TRY_IT.md#english) to import, inspect, compose, connect and export a design.
+**Try a real edit before installing anything.** [Open the interactive canvas](https://jiangzl1986-gif.github.io/skill-workbench/?lang=en), go inside “Outline design”, add “Evidence check” from another Skill, connect or cut links, and export a source-backed design. The animation replays actual UI steps.
+
+在线示例：中英文界面 · 无需登录 · 两套公开资料 · 草稿保存在自己的浏览器。示例导出用于交给 Agent 评估，不能直接导回桌面版。使用自己的 Skill 请下载完整版。[在线体验说明 / Browser guide](docs/ONLINE_DEMO.md) · [桌面版图文演示 / Desktop walkthrough](docs/TRY_IT.md)
+
+Browser example: Chinese / English UI · No account · Two public sources · Drafts stay in your browser. Example exports are for agent review, not desktop import. Download the full app to import your own Skills.
 
 Windows x64 · 界面中文 / Chinese UI · MIT · 本机运行 / Local-first · **无需另装 Python / Node.js**
 
