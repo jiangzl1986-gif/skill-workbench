@@ -44,7 +44,12 @@ export function validateDraft(value:unknown):string|null{
         for(const a of s.slots)if(!only(a,['id','origin_id','node_id','x','y','note'])||!identifier(a.id)||(a.origin_id!==null&&!byId.has(a.origin_id))||(a.node_id!==null&&!byId.has(a.node_id))||!position(a)||!bounded(a.note,2000))return 'Invalid or unknown inner module.';
       }
     }
-    return designError(d,children);
+    const structuralError=designError(d,children);
+    if(structuralError)return structuralError;
+    // An inserted whole source may itself contain the current parent.
+    // Validate implicit source children as well as explicit edited paths.
+    try{retainedNodes(d);}catch(e){return (e as Error).message;}
+    return null;
   }catch{return 'Unreadable draft; reset or recover a valid design.';}
 }
 export function restoreDraft():{draft:Draft;message:string|null}{
@@ -54,7 +59,8 @@ export function restoreDraft():{draft:Draft;message:string|null}{
 export function retainedNodes(d:Draft):string[]{
   const selected=new Set<string>();let visits=0;
   function walk(nid:string,l:Location,ancestry:Set<string>){
-    if(++visits>5000||ancestry.has(nid))throw Error('Source traversal exceeded its safe bound.');
+    if(ancestry.has(nid))throw Error('A module cannot contain itself, including through its original source children.');
+    if(++visits>5000)throw Error('Expanded design exceeds the safe traversal bound.');
     selected.add(nid);const next=new Set([...ancestry,nid]);
     for(const a of slotsAt(d,l,nid,children))if(a.node_id)walk(a.node_id,{owner_id:l.owner_id,path:[...l.path,a.id]},next);
   }
