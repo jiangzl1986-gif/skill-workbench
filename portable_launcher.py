@@ -53,7 +53,7 @@ def prepare(port):
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Skill Workbench Windows launcher')
+    parser = argparse.ArgumentParser(description='SkillTangram｜技能七巧板 Windows launcher')
     parser.add_argument('--port', type=int, default=int(os.environ.get('SKM_PORT', '8770')))
     parser.add_argument('--no-browser', action='store_true')
     parser.add_argument('--headless', action='store_true', help='For isolated packaging verification')
@@ -76,14 +76,14 @@ def main():
     import tkinter as tk
     from tkinter import messagebox, ttk
     window = tk.Tk()
-    window.title('Skill Workbench')
+    window.title('SkillTangram｜技能七巧板')
     window.geometry('540x280')
     window.resizable(False, False)
     style = ttk.Style(window)
     style.configure('TLabel', font=('Microsoft YaHei UI', 10))
     box = ttk.Frame(window, padding=24)
     box.pack(fill='both', expand=True)
-    ttk.Label(box, text='Skill 可视化创作工作台', font=('Microsoft YaHei UI', 16, 'bold')).pack(anchor='w')
+    ttk.Label(box, text='SkillTangram｜技能七巧板', font=('Microsoft YaHei UI', 16, 'bold')).pack(anchor='w')
     status = tk.StringVar(value='正在启动，请稍候…')
     ttk.Label(box, textvariable=status).pack(anchor='w', pady=(16, 8))
     url = f'http://127.0.0.1:{args.port}/'

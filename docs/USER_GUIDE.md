@@ -4,13 +4,13 @@
 
 ## 开始使用（Windows 安装包）
 
-下载 **windows-x64-setup.exe**，双击并点击 **Install**。安装后可以从桌面或开始菜单打开 **Skill Workbench**，浏览器会自动显示工作台。安装向导为英文，工作台界面为中文。所需运行环境已经包含，无需自行安装 Python 或 Node.js，也不需要联网下载依赖。
+下载 **windows-x64-setup.exe**，双击并点击 **Install**。安装后可以从桌面或开始菜单打开 **Skill Workbench（旧安装包名称）**，浏览器会自动显示工作台。安装向导为英文，工作台界面为中文。所需运行环境已经包含，无需自行安装 Python 或 Node.js，也不需要联网下载依赖。
 
 程序按当前用户安装，不要求管理员权限，不修改系统 PATH 或防火墙。默认程序目录为 `%LOCALAPPDATA%\Programs\Skill Workbench`，用户资料单独保存在 `%LOCALAPPDATA%\skill-workbench`。卸载程序保留用户资料；更新前先正常退出正在使用的工作台。
 
 ### 免安装方式
 
-下载 **windows-x64-portable.zip**，完整解压后打开 **Skill Workbench** 文件夹，双击 **启动工作台.exe**。无需自行安装 Python、Node.js，无需运行 setup 或联网下载依赖。当前提供 Windows x64 包，保留 EXE 旁的 `_internal` 文件夹。
+下载 **windows-x64-portable.zip**，完整解压后打开 **Skill Workbench（旧安装包名称）** 文件夹，双击 **启动工作台.exe**。无需自行安装 Python、Node.js，无需运行 setup 或联网下载依赖。当前提供 Windows x64 包，保留 EXE 旁的 `_internal` 文件夹。
 
 浏览器自动打开工作台；使用时保留启动窗口，点“退出工作台”正常停止服务。[免安装详细说明](WINDOWS_PORTABLE.md)
 

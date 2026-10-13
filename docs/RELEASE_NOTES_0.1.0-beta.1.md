@@ -1,8 +1,10 @@
-# Skill Workbench · 可视化 Skill 创作工作台
+<a id="skill-workbench--可视化-skill-创作工作台"></a>
 
-**让 Skill 可视化，让创作过程看得见。**
+# SkillTangram｜技能七巧板
 
-**An infinite canvas for visual AI Skill creation.**
+**在无限画布上，拼出你的 AI 技能。**
+
+**Compose AI Skills on an infinite canvas.**
 
 把 Skill 从分散的文件和文字讨论带到同一个可视化工作空间：看懂已有结构，用模块搭出新方案，再把完整设计交给自己的 Agent 或开发者完成接入。
 

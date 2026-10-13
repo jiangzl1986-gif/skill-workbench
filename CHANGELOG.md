@@ -1,5 +1,11 @@
 # 版本记录
 
+
+## Display name update / 品牌名称更新
+
+- SkillTangram｜技能七巧板，原名 Skill Workbench。中英文介绍、当前界面和源码启动器展示统一更新。
+- Original repository/demo URLs, release assets, data paths, saved drafts and export formats remain unchanged. See [compatibility](docs/BRANDING.md).
+
 ## 0.1.0-beta.2
 
 增加 Windows x64 免安装分发：自带 Python 与后端依赖、预构建页面，双击 EXE 后浏览器打开；图形启动窗口提供打开与正常退出。增加冻结资源定位与独立便携包检查，原来源、组装和权限标准继承。源码安装继续保留；不修改现有 Skill。

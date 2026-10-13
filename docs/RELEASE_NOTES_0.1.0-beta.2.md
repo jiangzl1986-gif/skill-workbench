@@ -1,8 +1,10 @@
-# Skill Workbench · 可视化 Skill 创作工作台
+<a id="skill-workbench--可视化-skill-创作工作台"></a>
 
-**让 Skill 可视化，让创作过程看得见。**
+# SkillTangram｜技能七巧板
 
-**An infinite canvas for visual AI Skill creation.**
+**在无限画布上，拼出你的 AI 技能。**
+
+**Compose AI Skills on an infinite canvas.**
 
 把已有 Skill 看清楚，把不同来源的模块重新搭配，把新 Skill 的结构画出来，再将完整设计交给自己的 Agent 或开发者完成接入。
 
@@ -12,7 +14,7 @@
 
 1. 在本页 **Assets** 中下载 **skill-workbench-0.1.0-beta.2-windows-x64-setup.exe**。
 2. **双击**安装程序，点击 **Install**。
-3. 完成后打开 **Skill Workbench**，浏览器自动显示工作台；以后可从桌面或开始菜单打开。
+3. 完成后打开 **Skill Workbench（旧安装包名称）**，浏览器自动显示工作台；以后可从桌面或开始菜单打开。
 
 **无需自行安装 Python、Node.js，无需运行 setup，也无需联网安装依赖。** 请下载上面的安装包；GitHub 自动提供的 Source code 是开发源码。
 
@@ -51,7 +53,7 @@ See how existing AI Skills are built, compose new designs on an infinite canvas,
 
 1. In **Assets**, download **skill-workbench-0.1.0-beta.2-windows-x64-setup.exe**.
 2. **Double-click** it and choose **Install**.
-3. Open **Skill Workbench** when finished. Your browser opens automatically; desktop and Start menu shortcuts are available for later use.
+3. Open **Skill Workbench** (the name in existing installers) when finished. Your browser opens automatically; desktop and Start menu shortcuts are available for later use.
 
 **No separate Python, Node.js, setup command or online dependency installation is required.** The automatically generated Source code archives are for developers. This package targets **Windows x64**; the workbench UI is Chinese and the wizard is English. Keep the launcher open while working. Click **退出工作台** to stop the local service. Data defaults to `%LOCALAPPDATA%\skill-workbench`, outside the application directory, and is retained on uninstall.
 

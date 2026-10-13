@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
-  <title id="title">Skill Workbench — 可视化 Skill 创作工作台</title>
+  <title id="title">SkillTangram｜技能七巧板</title>
   <desc id="desc">模块组合的结构示意：导入、看懂、重组、交给 Agent 实现。不是程序截图。</desc>
   <defs>
     <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#32514a"/></pattern>
@@ -11,11 +11,11 @@
   <g font-family="Segoe UI,Microsoft YaHei UI,Microsoft YaHei,sans-serif">
     <rect x="56" y="50" width="40" height="40" rx="10" fill="#b5e6c6"/>
     <path d="M66 68h20M76 60v8M68 69v11M84 69v11" stroke="#102c26" stroke-width="2"/>
-    <text x="112" y="79" fill="#dbefe3" font-size="23" font-weight="650">Skill Workbench</text>
-    <text x="56" y="199" fill="#f7fff9" font-size="57" font-weight="700">让 Skill 可视化</text>
-    <text x="56" y="272" fill="#b5e6c6" font-size="57" font-weight="700">让创作看得见</text>
-    <text x="58" y="330" fill="#d8e5de" font-size="26">在无限画布上，整理、设计与重组。</text>
-    <text x="58" y="383" fill="#9fc3af" font-size="23">A visual canvas for AI Skill creation.</text>
+    <text x="112" y="79" fill="#dbefe3" font-size="21" font-weight="650">SkillTangram｜技能七巧板</text>
+    <text x="56" y="199" fill="#f7fff9" font-size="57" font-weight="700">在无限画布上</text>
+    <text x="56" y="272" fill="#b5e6c6" font-size="57" font-weight="700">拼出 AI 技能</text>
+    <text x="58" y="330" fill="#d8e5de" font-size="26">看懂模块，组合你的下一个 Skill。</text>
+    <text x="58" y="383" fill="#9fc3af" font-size="21">Compose AI Skills on an infinite canvas.</text>
     <rect x="58" y="432" width="545" height="57" rx="12" fill="#1d3c32" stroke="#34594a"/>
     <text x="79" y="468" fill="#eff8f1" font-size="21">导入 → 看懂 → 重组 → 交给 Agent 实现</text>
     <text x="58" y="548" fill="#c4d5ca" font-size="20">Windows · Local-first · MIT</text>

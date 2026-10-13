@@ -57,7 +57,7 @@ def main():
             if any(token in relative.name.lower() for token in ('license', 'copying', 'notice')) and distribution.locate_file(relative).is_file():
                 destination = notices / ('build-' + name + '-' + relative.name)
                 shutil.copyfile(distribution.locate_file(relative), destination)
-    (bundle / '开始使用.txt').write_text('''Skill Workbench
+    (bundle / '开始使用.txt').write_text('''SkillTangram｜技能七巧板
 
 1. 完整解压整个文件夹。
 2. 双击“启动工作台.exe”，浏览器自动打开。

@@ -1,14 +1,18 @@
-# Skill Workbench · 可视化 Skill 创作工作台
+<a id="skill-workbench--可视化-skill-创作工作台"></a>
 
-**让 Skill 可视化，让创作过程看得见。**
+# SkillTangram｜技能七巧板
 
-**An infinite canvas for visual AI Skill creation.**
+**在无限画布上，拼出你的 AI 技能。**
 
-Skill Workbench 把 Skill 的结构、规则和模块带到可缩放、可平移的画布上。你可以看清已有 Skill，设计新的 Skill，把不同来源的大小模块重新搭配，再将完整设计交给自己的 Agent 或开发者完成接入。
+**Compose AI Skills on an infinite canvas.**
 
-See how existing AI Skills are built, design new ones on a visual canvas, and combine modules from different sources. Export the complete design to your agent or developer for integration.
+SkillTangram（技能七巧板）让模块像七巧板一样重新组合。看懂已有 Skill，复用不同来源的模块，在无限画布上组合、调整和设计，再将完整方案交给 Agent 核验与实现。
+
+SkillTangram turns reusable modules into pieces you can compose. Understand existing Skills, remix modules from different sources on an infinite canvas, and hand the complete design to your agent for validation and implementation.
 
 [**直接在线体验 / Try in your browser →**](https://jiangzl1986-gif.github.io/skill-workbench/) · [**下载 Windows 安装包 / Windows installer**](https://github.com/jiangzl1986-gif/skill-workbench/releases/download/v0.1.0-beta.2/skill-workbench-0.1.0-beta.2-windows-x64-setup.exe) · [**交流与案例 / Discussions**](https://github.com/jiangzl1986-gif/skill-workbench/discussions)
+
+原名 Skill Workbench；仓库与在线体验地址保持不变，原链接、草稿和旧下载继续可用。[名称与兼容说明](docs/BRANDING.md)。
 
 [中文介绍](#中文介绍) · [English on this page](#english) · [English README](README.en.md) · [全部下载 / All downloads](https://github.com/jiangzl1986-gif/skill-workbench/releases) · [使用指南 / User guide](docs/USER_GUIDE.md)
 
@@ -33,7 +37,7 @@ If it helps you create Skills, **Star** the repository to find it again. Share p
 
 用文字和 Agent 讨论 Skill 很方便，但随着规则和文件变多，你可能很难看清：已经做出了哪些模块？某条规则放在哪里？两个模块怎样交接？把别人的一个小模块接进来，应该放到哪个位置？
 
-Skill Workbench 为这个过程提供一个可见、可修改、可交接的工作空间。**把想法画出来，把结构看清楚，把修改位置说明白。** 文字仍可用于描述目标和接入要求，画布则让你直接表达模块的位置、组合与连接。
+SkillTangram 为这个过程提供一个可见、可修改、可交接的工作空间。**把想法画出来，把结构看清楚，把修改位置说明白。** 文字仍可用于描述目标和接入要求，画布则让你直接表达模块的位置、组合与连接。
 
 ## 用它可以怎样创作和整理 Skill
 
@@ -76,7 +80,7 @@ flowchart LR
 
 例如，你想给“笔记转大纲” Skill 增加证据复核能力。先导入它和“证据复核” Skill，载入前者的整套结构，进入“大纲设计”内部，把后者的“证据检查”加入指定位置，连接并写明交接意图。保存设计后，把导出的 JSON 交给自己的 Agent：它可以依据来源原文、版本和你的布局，分析接口与规则，再实施经过确认的方案。两份原 Skill 都保留。
 
-![在大模块内部接入另一份 Skill 的小模块 / Combining a submodule from another Skill inside a parent module](docs/images/inner-composition.png)
+![在大模块内部接入另一份 Skill 的小模块 / Combining a submodule from another Skill inside a parent module](docs/images/demo-inner.jpg)
 
 ## 具体功能
 
@@ -101,7 +105,7 @@ flowchart LR
 第一次体验可跟随 [公开示例图文演示](docs/TRY_IT.md)；无需先准备自己的 Skill，也无需模型账号。
 
 1. 下载 [Windows 安装包](https://github.com/jiangzl1986-gif/skill-workbench/releases)，选择 **windows-x64-setup.exe**。
-2. 双击安装程序，点击 **Install**；完成后打开 **Skill Workbench**，浏览器会自动显示工作台。以后可从桌面或开始菜单打开。
+2. 双击安装程序，点击 **Install**；完成后打开 **Skill Workbench（旧安装包名称）**，浏览器会自动显示工作台。以后可从桌面或开始菜单打开。
 3. 到“导入与同步”选择自己的 Skill，或先用安装目录 `examples` 中的两个公开示例体验跨来源组装。
 
 **不需要自己安装 Python、Node.js，不需要运行 setup，也不需要联网安装依赖。** 当前支持 Windows x64，工作台界面为中文，安装向导为英文。使用时保留启动窗口，点 **退出工作台** 正常停止服务。
@@ -135,7 +139,7 @@ flowchart LR
 
 Text conversations with an agent are useful for building a Skill. As its rules and files grow, it becomes harder to see which modules exist, where a rule belongs, how two modules should hand off their work, or where a submodule from another Skill should fit.
 
-Skill Workbench gives that process a visible, editable workspace. **Sketch your ideas, inspect the structure, and show exactly where a change belongs.** Use text to explain goals and integration requirements, and the canvas to express module placement, composition and connections.
+SkillTangram gives that process a visible, editable workspace. **Sketch your ideas, inspect the structure, and show exactly where a change belongs.** Use text to explain goals and integration requirements, and the canvas to express module placement, composition and connections.
 
 ## What you can create and organize
 
@@ -201,7 +205,7 @@ Canvas connections express your design. **An executable Skill still requires int
 For your first session, follow the [public-example walkthrough](docs/TRY_IT.md#english). You do not need your own Skill or a model account to try the workbench.
 
 1. Download the [Windows installer](https://github.com/jiangzl1986-gif/skill-workbench/releases), choosing **windows-x64-setup.exe**.
-2. Double-click it and choose **Install**. Open **Skill Workbench** when finished; your browser opens automatically. Desktop and Start menu shortcuts are available for later use.
+2. Double-click it and choose **Install**. Open **Skill Workbench** (the name in existing installers) when finished; your browser opens automatically. Desktop and Start menu shortcuts are available for later use.
 3. Import your Skill through “导入与同步”, or try the two public examples in the installed `examples` folder.
 
 **No separate Python, Node.js, setup command or online dependency installation is needed.** The package targets Windows x64; the workbench UI is Chinese and the installer wizard is English. Keep the launcher open and click **退出工作台** to stop the service.

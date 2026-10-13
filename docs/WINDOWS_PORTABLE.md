@@ -2,16 +2,16 @@
 
 ## 直接双击安装（推荐）
 
-下载 **windows-x64-setup.exe**，双击并点击 **Install**。安装结束后打开 **Skill Workbench**；以后从桌面或开始菜单启动。所需运行时已包含，不需要安装 Python/Node.js 或联网下载依赖。安装向导为英文，工作台界面为中文。
+下载 **windows-x64-setup.exe**，双击并点击 **Install**。安装结束后打开 **Skill Workbench（旧安装包名称）**；以后从桌面或开始菜单启动。所需运行时已包含，不需要安装 Python/Node.js 或联网下载依赖。安装向导为英文，工作台界面为中文。
 
 仅为当前用户安装，默认在 `%LOCALAPPDATA%\Programs\Skill Workbench`；无需管理员，不修改系统 PATH、文件关联或防火墙。用户资料另存于 `%LOCALAPPDATA%\skill-workbench`，卸载不删除该目录。更新前正常退出正在使用的工作台。
 
-Download **windows-x64-setup.exe**, double-click it and choose **Install**. Open **Skill Workbench** after installation; desktop and Start menu shortcuts are available. The installer is offline and per-user, without administrator, PATH or firewall changes. User data is stored separately and retained on uninstall. The wizard is English; the workbench UI is Chinese.
+Download **windows-x64-setup.exe**, double-click it and choose **Install**. Open **Skill Workbench** (the name in existing installers) after installation; desktop and Start menu shortcuts are available. The installer is offline and per-user, without administrator, PATH or firewall changes. User data is stored separately and retained on uninstall. The wizard is English; the workbench UI is Chinese.
 
 ## 免安装方式 / Portable option
 
 1. 从发布页下载 **windows-x64-portable.zip**。
-2. 完整解压，打开 **Skill Workbench** 文件夹。
+2. 完整解压，打开 **Skill Workbench（旧安装包名称）** 文件夹。
 3. 双击 **启动工作台.exe**，浏览器会自动打开工作台。
 4. 使用时保留启动窗口；点 **退出工作台** 正常停止本次服务。
 
@@ -35,7 +35,7 @@ For developers: build on Windows x64 with Python 3.11.9 and Node.js 22. Run `set
 
 ## English
 
-Download **windows-x64-portable.zip**, extract the complete archive, then double-click **启动工作台.exe** inside the **Skill Workbench** folder. Your browser opens automatically. Keep the launcher open; click **退出工作台** to stop the service.
+Download **windows-x64-portable.zip**, extract the complete archive, then double-click **启动工作台.exe** inside the **Skill Workbench** folder (legacy package name). Your browser opens automatically. Keep the launcher open; click **退出工作台** to stop the service.
 
 No separate Python, Node.js, setup command or online dependency installation is required. This package targets Windows x64; the UI is Chinese. Keep the `_internal` folder next to the EXE. User data defaults to `%LOCALAPPDATA%\skill-workbench`, outside the application directory. Original Skill sources stay read-only. Exported designs still require agent or developer integration.
 

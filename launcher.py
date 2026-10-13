@@ -29,7 +29,7 @@ def main():
                         webbrowser.open(url);return
                 time.sleep(.1)
         threading.Thread(target=open_when_ready,daemon=True).start()
-    print('Skill Workbench:',url,'\n运行资料：',config.RUNTIME,'\n按 Ctrl+C 停止。')
+    print('SkillTangram｜技能七巧板:',url,'\n运行资料：',config.RUNTIME,'\n按 Ctrl+C 停止。')
     import uvicorn
     uvicorn.run(api.app,host='127.0.0.1',port=args.port)
 

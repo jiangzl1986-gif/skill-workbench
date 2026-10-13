@@ -20,3 +20,6 @@
 .import-card input[hidden]{display:none}
 
 .welcome{margin:24px;padding:28px;border:1px solid #d7e4dd;border-radius:14px;background:#f4f9f5}.welcome h2{color:#1e5140}.welcome p{line-height:1.9}.welcome small{display:block;margin-top:14px;color:#607c6d}
+
+/* Brand stays readable inside the existing sidebar without changing navigation. */
+.brand strong .brand-cn{display:block;font-size:12px;font-weight:500;letter-spacing:.5px;margin-top:4px}.brand strong{line-height:1.25}.brand small{letter-spacing:.9px}

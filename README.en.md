@@ -1,10 +1,14 @@
-# Skill Workbench · Visual AI Skill Creation
+<a id="skill-workbench--visual-ai-skill-creation"></a>
 
-**An infinite canvas for visual AI Skill creation.**
+# SkillTangram｜技能七巧板
 
-See how existing AI Skills are built, design new ones on a visual canvas, and combine modules from different sources. Export the complete design to your agent or developer for integration.
+**Compose AI Skills on an infinite canvas.**
+
+SkillTangram turns reusable modules into pieces you can compose. Understand existing Skills, remix modules from different sources on an infinite canvas, and hand the complete design to your agent for validation and implementation.
 
 [**Try in your browser — no install →**](https://jiangzl1986-gif.github.io/skill-workbench/?lang=en) · [**Download Windows installer**](https://github.com/jiangzl1986-gif/skill-workbench/releases/download/v0.1.0-beta.2/skill-workbench-0.1.0-beta.2-windows-x64-setup.exe) · [**Discussions**](https://github.com/jiangzl1986-gif/skill-workbench/discussions)
+
+Formerly Skill Workbench. Repository and demo URLs, saved drafts and existing downloads remain compatible. [Name and compatibility](docs/BRANDING.md).
 
 [中文 / Bilingual overview](README.md) · [All downloads](https://github.com/jiangzl1986-gif/skill-workbench/releases) · [User guide (Chinese)](docs/USER_GUIDE.md)
 
@@ -25,7 +29,7 @@ If it helps you create Skills, **Star** the repository to find it again. Share p
 
 Text conversations with an agent are useful for building a Skill. As its rules and files grow, it becomes harder to see which modules exist, where a rule belongs, how two modules should hand off their work, or where a submodule from another Skill should fit.
 
-Skill Workbench gives that process a visible, editable workspace. **Sketch your ideas, inspect the structure, and show exactly where a change belongs.** Use text to explain goals and integration requirements, and the canvas to express module placement, composition and connections.
+SkillTangram gives that process a visible, editable workspace. **Sketch your ideas, inspect the structure, and show exactly where a change belongs.** Use text to explain goals and integration requirements, and the canvas to express module placement, composition and connections.
 
 ## What you can create and organize
 
@@ -91,7 +95,7 @@ Canvas connections express your design. **An executable Skill still requires int
 For your first session, follow the [public-example walkthrough](docs/TRY_IT.md#english). You do not need your own Skill or a model account to try the workbench.
 
 1. Download the [Windows installer](https://github.com/jiangzl1986-gif/skill-workbench/releases), choosing **windows-x64-setup.exe**.
-2. Double-click it and choose **Install**. Open **Skill Workbench** when finished; your browser opens automatically. Desktop and Start menu shortcuts are available for later use.
+2. Double-click it and choose **Install**. Open **Skill Workbench** (the name in existing installers) when finished; your browser opens automatically. Desktop and Start menu shortcuts are available for later use.
 3. Import your Skill through “导入与同步”, or try the two public examples in the installed `examples` folder.
 
 **No separate Python, Node.js, setup command or online dependency installation is needed.** The package targets Windows x64; the workbench UI is Chinese and the installer wizard is English. Keep the launcher open and click **退出工作台** to stop the service.

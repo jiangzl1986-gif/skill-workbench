@@ -12,7 +12,7 @@
 
 ## 1. 下载后打开工作台
 
-下载 `windows-x64-setup.exe`，双击，点击 **Install**。打开 **Skill Workbench**，浏览器会显示工作台。以后可从桌面或开始菜单打开；使用时保留启动窗口。
+下载 `windows-x64-setup.exe`，双击，点击 **Install**。打开 **Skill Workbench（旧安装包名称）**，浏览器会显示工作台。以后可从桌面或开始菜单打开；使用时保留启动窗口。
 
 不需要自己安装 Python 或 Node.js，也不需要模型账号。当前支持 Windows x64；安装向导为英文，工作台界面为中文。
 
@@ -87,7 +87,7 @@
 
 The screenshots above are from the released Windows application using only these two public examples. Connections express design intent; exporting does not automatically create or install an executable Skill.
 
-1. **Install and open.** Download the [Windows x64 installer](https://github.com/jiangzl1986-gif/skill-workbench/releases/download/v0.1.0-beta.2/skill-workbench-0.1.0-beta.2-windows-x64-setup.exe), double-click and choose **Install**. Open **Skill Workbench** from the desktop or Start menu. Keep the launcher window open. No separate Python, Node.js or model account is needed. The application UI is Chinese; the installer is English.
+1. **Install and open.** Download the [Windows x64 installer](https://github.com/jiangzl1986-gif/skill-workbench/releases/download/v0.1.0-beta.2/skill-workbench-0.1.0-beta.2-windows-x64-setup.exe), double-click and choose **Install**. Open **Skill Workbench** (the name in existing installers) from the desktop or Start menu. Keep the launcher window open. No separate Python, Node.js or model account is needed. The application UI is Chinese; the installer is English.
 2. **Find the examples.** The default program directory is `%LOCALAPPDATA%\Programs\Skill Workbench`. Open its `examples` folder. If you selected another installation directory, look there. For the portable package, use the extracted program directory.
 3. **Import both complete folders.** In **导入与同步** (Import and sync), choose `examples/notes-to-outline`, preview the complete source and confirm adoption. Repeat for `examples/evidence-review`. Folder selection, folder drag-and-drop and ZIP import are supported. Neither example needs to be installed into an agent.
 4. **Inspect the map.** In **知识地图** (Knowledge map), select `notes-to-outline`. Open nodes to see the structure and original content. File and rule nodes provide source text and line numbers. Extracted structure is not a validated execution flow.

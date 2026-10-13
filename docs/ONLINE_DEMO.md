@@ -1,6 +1,10 @@
-# 在线体验 · Browser example
+<a id="在线体验--browser-example"></a>
+
+# SkillTangram｜技能七巧板 · 在线体验
 
 [**打开画布，直接动手 / Open the interactive canvas**](https://jiangzl1986-gif.github.io/skill-workbench/)
+
+在无限画布上，拼出你的 AI 技能。
 
 不用安装、不用登录、不用模型账号。打开后切换右上角 **中文 / English**。
 
@@ -33,6 +37,8 @@
 ---
 
 ## English
+
+Compose AI Skills on an infinite canvas.
 
 [**Try it now — no installation or account**](https://jiangzl1986-gif.github.io/skill-workbench/?lang=en)
 
